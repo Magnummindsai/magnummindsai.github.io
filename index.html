@@ -1,0 +1,2004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Magnum Minds AI | Custom AI Agents, RAG Systems &amp; Machine Learning</title>
+<meta name="description" content="Magnum Minds AI designs and deploys custom AI agents, RAG knowledge systems, and machine learning solutions that plug into your existing data and tools to cut costs, save time, and drive revenue.">
+<meta name="theme-color" content="#070B18">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Magnum Minds AI">
+<meta property="og:description" content="Building intelligent AI systems that solve real business problems.">
+<meta property="og:site_name" content="Magnum Minds AI">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Magnum Minds AI">
+<meta name="twitter:description" content="Building intelligent AI systems that solve real business problems.">
+<!-- Favicon: the geometric "M" node mark -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 48 48%22%3E%3Cdefs%3E %3ClinearGradient id=%22mm-bg%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22%3E%3Cstop offset=%220%22 stop-color=%22%231B1F4B%22/%3E%3Cstop offset=%221%22 stop-color=%22%23070B18%22/%3E%3C/linearGradient%3E %3ClinearGradient id=%22mm-rim%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22%3E%3Cstop offset=%220%22 stop-color=%22%23A5B4FC%22 stop-opacity=%22.9%22/%3E%3Cstop offset=%22.5%22 stop-color=%22%236366F1%22 stop-opacity=%22.25%22/%3E%3Cstop offset=%221%22 stop-color=%22%2322D3EE%22 stop-opacity=%22.8%22/%3E%3C/linearGradient%3E %3ClinearGradient id=%22mm-f1%22 x1=%220%22 y1=%221%22 x2=%220%22 y2=%220%22%3E%3Cstop offset=%220%22 stop-color=%22%234F46E5%22/%3E%3Cstop offset=%221%22 stop-color=%22%23C7D2FE%22/%3E%3C/linearGradient%3E %3ClinearGradient id=%22mm-f2%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22%3E%3Cstop offset=%220%22 stop-color=%22%23312E81%22/%3E%3Cstop offset=%221%22 stop-color=%22%234338CA%22/%3E%3C/linearGradient%3E %3ClinearGradient id=%22mm-f3%22 x1=%220%22 y1=%221%22 x2=%221%22 y2=%220%22%3E%3Cstop offset=%220%22 stop-color=%22%230EA5E9%22/%3E%3Cstop offset=%221%22 stop-color=%22%23A5F3FC%22/%3E%3C/linearGradient%3E %3ClinearGradient id=%22mm-f4%22 x1=%220%22 y1=%220%22 x2=%220%22 y2=%221%22%3E%3Cstop offset=%220%22 stop-color=%22%230891B2%22/%3E%3Cstop offset=%221%22 stop-color=%22%23155E75%22/%3E%3C/linearGradient%3E %3CradialGradient id=%22mm-glow%22%3E%3Cstop offset=%220%22 stop-color=%22%2322D3EE%22 stop-opacity=%22.9%22/%3E%3Cstop offset=%221%22 stop-color=%22%2322D3EE%22 stop-opacity=%220%22/%3E%3C/radialGradient%3E %3CradialGradient id=%22mm-sheen%22 cx=%22.25%22 cy=%22.1%22 r=%22.9%22%3E%3Cstop offset=%220%22 stop-color=%22%236366F1%22 stop-opacity=%22.45%22/%3E%3Cstop offset=%221%22 stop-color=%22%236366F1%22 stop-opacity=%220%22/%3E%3C/radialGradient%3E %3C/defs%3E%3Crect x=%221%22 y=%221%22 width=%2246%22 height=%2246%22 rx=%2213%22 fill=%22url%28%23mm-bg%29%22/%3E %3Crect x=%221%22 y=%221%22 width=%2246%22 height=%2246%22 rx=%2213%22 fill=%22url%28%23mm-sheen%29%22/%3E %3Ccircle cx=%2224%22 cy=%2224%22 r=%2217.5%22 fill=%22none%22 stroke=%22%23fff%22 stroke-opacity=%22.07%22/%3E %3Cpath d=%22M9.5 16.5A16 16 0 0 1 38.5 16.5%22 fill=%22none%22 stroke=%22%2322D3EE%22 stroke-opacity=%22.35%22 stroke-width=%22.8%22 stroke-dasharray=%221.2 2%22/%3E %3Ccircle cx=%2224%22 cy=%2228%22 r=%2210%22 fill=%22url%28%23mm-glow%29%22 opacity=%22.55%22/%3E %3Cpath d=%22M16.60,36.00L16.60,24.75L10.40,8.25L10.40,36.00Z%22 fill=%22url%28%23mm-f1%29%22/%3E %3Cpath d=%22M16.60,24.75L24.00,33.21L24.00,23.79L10.40,8.25Z%22 fill=%22url%28%23mm-f2%29%22/%3E %3Cpath d=%22M24.00,33.21L31.40,24.75L37.60,8.25L24.00,23.79Z%22 fill=%22url%28%23mm-f3%29%22/%3E %3Cpath d=%22M31.40,24.75L31.40,36.00L37.60,36.00L37.60,8.25Z%22 fill=%22url%28%23mm-f4%29%22/%3E %3Cpath d=%22M16.60,24.75L10.40,8.25M24.00,33.21L24.00,23.79M31.40,24.75L37.60,8.25%22 stroke=%22%23fff%22 stroke-opacity=%22.55%22 stroke-width=%22.6%22/%3E %3Cpath d=%22M24 8.6l1 2.7 2.7 1-2.7 1L24 16l-1-2.7-2.7-1 2.7-1z%22 fill=%22%23F5C878%22/%3E %3Crect x=%221.5%22 y=%221.5%22 width=%2245%22 height=%2245%22 rx=%2212.5%22 fill=%22none%22 stroke=%22url%28%23mm-rim%29%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* =========================================================================
+   1. DESIGN TOKENS  (edit colours here)
+   Light theme is the base; dark theme overrides below.
+   ========================================================================= */
+:root{
+  --bg:#F6F7FB;
+  --bg-2:#EDEFF7;
+  --surface:#FFFFFF;
+  --surface-2:#F2F4FA;
+  --line:rgba(18,26,64,.10);
+  --line-strong:rgba(18,26,64,.18);
+  --text:#0D1330;
+  --muted:#525B7D;
+  --primary:#4F46E5;      /* electric indigo */
+  --primary-ink:#FFFFFF;
+  --accent:#0E8FAE;       /* signal cyan (darkened for contrast on light) */
+  --amber:#A86A10;
+  --success:#0F8A5F;
+  --danger:#C23B3B;
+  --glass:rgba(255,255,255,.72);
+  --shadow:0 1px 2px rgba(13,19,48,.04), 0 12px 32px -12px rgba(13,19,48,.14);
+  --shadow-lg:0 30px 80px -30px rgba(13,19,48,.35);
+  --glow:rgba(79,70,229,.14);
+
+  --font-display:"Sora", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-body:"Manrope", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono:"JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  --r-xl:28px; --r-lg:20px; --r-md:14px; --r-sm:10px; --r-xs:6px;
+  --max:1200px;
+  --header-h:72px;
+
+  /* safe-area handling for edge-to-edge phones */
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#070B18; --bg-2:#0A1022; --surface:#0E1428; --surface-2:#141C36;
+    --line:rgba(150,165,215,.13); --line-strong:rgba(150,165,215,.24);
+    --text:#E9EDF9; --muted:#9AA4C6;
+    --primary:#7C7FF7; --primary-ink:#0A0E1F; --accent:#22D3EE; --amber:#F5B544;
+    --success:#3DDC97; --danger:#FF7B7B;
+    --glass:rgba(14,20,40,.66);
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 18px 40px -18px rgba(0,0,0,.6);
+    --shadow-lg:0 40px 90px -30px rgba(0,0,0,.8);
+    --glow:rgba(124,127,247,.18);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#070B18; --bg-2:#0A1022; --surface:#0E1428; --surface-2:#141C36;
+  --line:rgba(150,165,215,.13); --line-strong:rgba(150,165,215,.24);
+  --text:#E9EDF9; --muted:#9AA4C6;
+  --primary:#7C7FF7; --primary-ink:#0A0E1F; --accent:#22D3EE; --amber:#F5B544;
+  --success:#3DDC97; --danger:#FF7B7B;
+  --glass:rgba(14,20,40,.66);
+  --shadow:0 1px 2px rgba(0,0,0,.3), 0 18px 40px -18px rgba(0,0,0,.6);
+  --shadow-lg:0 40px 90px -30px rgba(0,0,0,.8);
+  --glow:rgba(124,127,247,.18);
+  color-scheme:dark;
+}
+
+/* =========================================================================
+   2. BASE
+   ========================================================================= */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 84px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:1.0625rem;line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;transition:background-color .3s ease,color .3s ease}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,h4{font-family:var(--font-display);line-height:1.12;margin:0;letter-spacing:-.02em;font-weight:600}
+p{margin:0}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip-link{position:absolute;left:16px;top:-60px;z-index:200;background:var(--primary);color:var(--primary-ink);padding:10px 16px;border-radius:var(--r-sm);font-weight:600;text-decoration:none;transition:top .2s}
+.skip-link:focus{top:calc(env(safe-area-inset-top,0px) + 12px)}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 clamp(20px,4vw,40px)}
+section{position:relative}
+.section{padding:clamp(80px,11vw,140px) 0}
+.section-head{max-width:720px;margin-bottom:clamp(40px,6vw,64px)}
+.section-head h2{font-size:clamp(2rem,3.6vw,3.05rem)}
+.section-head p{margin-top:18px;color:var(--muted);font-size:1.125rem;max-width:62ch}
+.muted{color:var(--muted)}
+.mono{font-family:var(--font-mono)}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 22px;border-radius:999px;border:1px solid transparent;font-weight:600;font-size:.97rem;text-decoration:none;cursor:pointer;white-space:nowrap;transition:transform .2s ease,background-color .2s ease,border-color .2s ease,box-shadow .2s ease,color .2s ease}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:var(--primary);color:var(--primary-ink);box-shadow:0 10px 30px -10px var(--primary)}
+.btn-primary:hover{box-shadow:0 14px 36px -10px var(--primary);transform:translateY(-1px)}
+.btn-ghost{background:transparent;border-color:var(--line-strong);color:var(--text)}
+.btn-ghost:hover{border-color:var(--primary);background:var(--glow)}
+.btn-sm{min-height:40px;padding:0 16px;font-size:.9rem}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+
+/* Tags & chips */
+.tag{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;font-size:.78rem;font-weight:600;background:var(--glow);color:var(--primary);border:1px solid color-mix(in srgb,var(--primary) 30%,transparent)}
+.chip{display:inline-flex;padding:4px 10px;border-radius:var(--r-xs);font-family:var(--font-mono);font-size:.74rem;background:var(--surface-2);border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+.chips{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:0;padding:0}
+
+/* Scroll reveal (subtle, opt-in via JS) */
+.js [data-reveal]{opacity:0;transform:translateY(14px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.js [data-reveal].is-in{opacity:1;transform:none}
+
+/* =========================================================================
+   3. HEADER
+   ========================================================================= */
+.site-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;height:var(--header-h);background:color-mix(in srgb,var(--bg) 78%,transparent);backdrop-filter:saturate(160%) blur(16px);-webkit-backdrop-filter:saturate(160%) blur(16px);border-bottom:1px solid transparent;transition:border-color .3s,background-color .3s}
+.site-header.scrolled{border-bottom-color:var(--line)}
+.header-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:var(--text)}
+.logo svg{width:40px;height:40px;flex:none;filter:drop-shadow(0 8px 18px rgba(79,70,229,.35));transition:transform .4s cubic-bezier(.2,.7,.2,1),filter .4s}
+.logo:hover svg{transform:translateY(-1px) scale(1.04);filter:drop-shadow(0 10px 22px rgba(34,211,238,.4))}
+.logo-word{font-family:var(--font-display);font-weight:600;font-size:1.08rem;letter-spacing:-.01em;line-height:1}
+.logo-word span{display:inline-block;margin-left:6px;padding:3px 7px 2px;border-radius:6px;font-size:.72rem;font-weight:700;letter-spacing:.04em;color:#fff;background:linear-gradient(135deg,#6366F1,#0E8FAE);vertical-align:2px}
+.nav{display:flex;align-items:center;gap:4px}
+.nav a{padding:8px 14px;border-radius:999px;text-decoration:none;font-weight:500;font-size:.95rem;color:var(--muted);transition:color .2s,background-color .2s}
+.nav a:hover,.nav a[aria-current="true"]{color:var(--text);background:var(--surface-2)}
+.header-actions{display:flex;align-items:center;gap:10px}
+.icon-btn{width:42px;height:42px;display:inline-grid;place-items:center;border-radius:999px;border:1px solid var(--line);background:var(--surface);cursor:pointer;transition:border-color .2s,transform .2s}
+.icon-btn:hover{border-color:var(--primary)}
+.icon-btn svg{width:18px;height:18px}
+.theme-toggle .sun{display:none}
+:root[data-theme="dark"] .theme-toggle .sun{display:block}
+:root[data-theme="dark"] .theme-toggle .moon{display:none}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .theme-toggle .sun{display:block}
+  :root:not([data-theme="light"]) .theme-toggle .moon{display:none}
+}
+.menu-btn{display:none}
+.mobile-nav{display:none}
+@media (max-width:960px){
+  .nav,.header-actions .btn{display:none}
+  .menu-btn{display:inline-grid}
+  .mobile-nav{position:fixed;left:0;right:0;top:calc(env(safe-area-inset-top,0px) + var(--header-h));z-index:49;background:var(--bg);border-bottom:1px solid var(--line);padding:12px clamp(20px,4vw,40px) 24px;display:flex;flex-direction:column;gap:4px;transform:translateY(-8px);opacity:0;visibility:hidden;transition:opacity .25s,transform .25s,visibility .25s}
+  .mobile-nav.open{opacity:1;transform:none;visibility:visible}
+  .mobile-nav a{padding:14px 4px;text-decoration:none;font-family:var(--font-display);font-size:1.2rem;border-bottom:1px solid var(--line)}
+  .mobile-nav .btn{margin-top:16px}
+}
+
+/* =========================================================================
+   4. HERO (3D neural lattice)
+   ========================================================================= */
+.hero{position:relative;min-height:min(920px,calc(100svh - var(--header-h)));display:flex;align-items:center;overflow:hidden;isolation:isolate;padding:clamp(56px,8vw,96px) 0}
+.hero-visual{position:absolute;inset:0;z-index:-1;pointer-events:none}
+.hero-visual canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero-visual::after{content:"";position:absolute;inset:0;background:
+  radial-gradient(60% 70% at 72% 45%,transparent 0,transparent 40%,var(--bg) 100%),
+  linear-gradient(to bottom,transparent 70%,var(--bg))}
+.hero-fallback{position:absolute;right:-8%;top:8%;width:min(62vw,720px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 40% 40%,color-mix(in srgb,var(--accent) 45%,transparent),color-mix(in srgb,var(--primary) 30%,transparent) 45%,transparent 70%);filter:blur(10px);opacity:.7;display:none}
+.no-webgl .hero-fallback{display:block}
+.hero-grid{display:grid;grid-template-columns:minmax(0,640px) 1fr;gap:40px;align-items:center;width:100%}
+.hero h1{font-size:clamp(2.6rem,5.6vw,4.7rem);font-weight:600;letter-spacing:-.035em;line-height:1.02}
+.hero-sub{margin-top:26px;font-size:clamp(1.08rem,1.4vw,1.22rem);color:var(--muted);max-width:56ch}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.hero-points{display:flex;flex-wrap:wrap;gap:10px 26px;margin:40px 0 0;padding:0;list-style:none;font-size:.93rem;color:var(--muted)}
+.hero-points li{display:flex;align-items:center;gap:9px}
+.hero-points svg{width:16px;height:16px;color:var(--accent)}
+@media (max-width:960px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-visual::after{background:linear-gradient(to bottom,color-mix(in srgb,var(--bg) 30%,transparent),color-mix(in srgb,var(--bg) 75%,transparent) 55%,var(--bg))}
+}
+
+/* =========================================================================
+   5. WHY US  (where AI breaks vs how we build it)
+   ========================================================================= */
+.why{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.why-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px,6vw,96px);align-items:start}
+.why-intro{position:sticky;top:calc(env(safe-area-inset-top,0px) + var(--header-h) + 40px)}
+.why-intro h2{font-size:clamp(2rem,3.6vw,3.05rem)}
+.why-intro p{margin-top:20px;color:var(--muted);font-size:1.1rem}
+.why-cols{display:grid;grid-template-columns:1fr 1fr;gap:0 28px;padding-bottom:14px;border-bottom:1px solid var(--line-strong);font-size:.88rem;font-weight:600;color:var(--muted)}
+.why-row{display:grid;grid-template-columns:1fr 1fr;gap:28px;padding:28px 0;border-bottom:1px solid var(--line)}
+.why-row .broken{color:var(--muted);font-size:.98rem;padding-left:18px;position:relative}
+.why-row .broken::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:8px;border-radius:2px;border:1.5px solid var(--muted);opacity:.6}
+.why-row h3{font-size:1.2rem;display:flex;align-items:center;gap:10px}
+.why-row h3 svg{width:20px;height:20px;color:var(--accent);flex:none}
+.why-row .fix p{margin-top:8px;color:var(--muted);font-size:.98rem}
+@media (max-width:860px){
+  .why-grid{grid-template-columns:1fr}
+  .why-intro{position:static}
+  .why-cols{display:none}
+  .why-row{grid-template-columns:1fr;gap:12px}
+}
+
+/* =========================================================================
+   6. SOLUTIONS  (hairline grid, not floating cards)
+   ========================================================================= */
+.sol-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.sol{padding:clamp(28px,3vw,40px);border-right:1px solid var(--line);border-bottom:1px solid var(--line);position:relative;transition:background-color .3s}
+.sol:hover{background:var(--surface)}
+.sol-icon{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;background:var(--glow);color:var(--primary);margin-bottom:24px;transition:transform .3s}
+.sol:hover .sol-icon{transform:rotate(-6deg) scale(1.05)}
+.sol-icon svg{width:24px;height:24px}
+.sol h3{font-size:1.22rem}
+.sol p{margin-top:10px;color:var(--muted);font-size:.98rem}
+.sol ul{margin:18px 0 0;padding:0;list-style:none;display:grid;gap:6px;font-size:.9rem}
+.sol li{display:flex;gap:10px;align-items:baseline}
+.sol li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--accent);flex:none;transform:translateY(-2px)}
+@media (max-width:960px){.sol-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:620px){.sol-grid{grid-template-columns:1fr}}
+
+/* =========================================================================
+   7. POC PROJECTS
+   ========================================================================= */
+.projects{background:linear-gradient(to bottom,var(--bg),var(--bg-2))}
+.proj-headrow{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(40px,6vw,64px)}
+.proj-headrow .section-head{margin-bottom:0}
+.synthetic-note{display:inline-flex;align-items:center;gap:8px;font-size:.86rem;color:var(--muted);padding:8px 14px;border:1px dashed var(--line-strong);border-radius:999px}
+.synthetic-note svg{width:15px;height:15px;color:var(--accent)}
+.proj-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.proj{position:relative;display:flex;flex-direction:column;gap:20px;padding:clamp(24px,3vw,36px);background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow);cursor:pointer;transition:border-color .3s,transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s;overflow:hidden}
+.proj::before{content:"";position:absolute;inset:0;background:radial-gradient(500px 240px at var(--mx,80%) var(--my,0%),var(--glow),transparent 70%);opacity:0;transition:opacity .4s;pointer-events:none}
+.proj:hover{border-color:color-mix(in srgb,var(--primary) 40%,var(--line));transform:translateY(-3px)}
+.proj:hover::before{opacity:1}
+.proj > *{position:relative}
+.proj-top{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+.proj-subtags{font-size:.82rem;color:var(--muted)}
+.badge-soon{margin-left:auto;font-size:.76rem;font-weight:600;padding:4px 10px;border-radius:999px;color:var(--amber);border:1px solid color-mix(in srgb,var(--amber) 45%,transparent);background:color-mix(in srgb,var(--amber) 10%,transparent)}
+.badge-live{margin-left:auto;display:inline-flex;align-items:center;gap:6px;font-size:.76rem;font-weight:600;color:var(--success)}
+.badge-live::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.proj h3{font-size:clamp(1.3rem,2vw,1.6rem);letter-spacing:-.02em}
+.proj-ps{display:grid;gap:14px;margin:0}
+.proj-ps dt{font-size:.82rem;font-weight:700;color:var(--text);margin-bottom:4px}
+.proj-ps dd{margin:0;color:var(--muted);font-size:.97rem}
+.caps{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:.93rem}
+.caps li{display:flex;gap:10px;align-items:flex-start}
+.caps svg{width:16px;height:16px;margin-top:4px;color:var(--accent);flex:none}
+.impact{padding:14px 16px;border-radius:var(--r-sm);background:color-mix(in srgb,var(--success) 8%,transparent);border:1px solid color-mix(in srgb,var(--success) 22%,transparent);font-size:.93rem}
+.impact strong{display:block;font-size:.8rem;color:var(--success);margin-bottom:3px}
+.proj-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:4px}
+.proj--feature{grid-column:1 / -1;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:24px 48px;align-items:start}
+.proj--feature .proj-top,.proj--feature h3{grid-column:1 / -1}
+.proj--feature h3{font-size:clamp(1.6rem,2.6vw,2.1rem);max-width:24ch}
+.proj--feature .proj-col{display:flex;flex-direction:column;gap:20px}
+@media (max-width:900px){
+  .proj-grid{grid-template-columns:1fr}
+  .proj--feature{grid-template-columns:1fr}
+}
+
+/* =========================================================================
+   8. PROCESS TIMELINE
+   ========================================================================= */
+.timeline{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:24px;position:relative;counter-reset:step}
+.timeline::before{content:"";position:absolute;top:22px;left:22px;right:22px;height:2px;background:var(--line-strong)}
+.timeline::after{content:"";position:absolute;top:22px;left:22px;height:2px;width:0;background:linear-gradient(90deg,var(--primary),var(--accent));transition:width 1.6s cubic-bezier(.3,.6,.2,1)}
+.timeline.is-in::after{width:calc(100% - 44px)}
+.step{position:relative;counter-increment:step}
+.step-num{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--surface);border:2px solid var(--primary);font-family:var(--font-display);font-weight:600;font-size:.95rem;color:var(--primary);position:relative;z-index:1}
+.step h3{margin-top:22px;font-size:1.14rem}
+.step p{margin-top:8px;color:var(--muted);font-size:.94rem}
+.step .deliv{margin-top:14px;font-size:.86rem;padding-top:12px;border-top:1px solid var(--line)}
+.step .deliv b{color:var(--text);font-weight:600}
+@media (max-width:960px){
+  .timeline{grid-template-columns:1fr;gap:0}
+  .timeline::before,.timeline::after{top:22px;bottom:22px;left:21px;right:auto;width:2px;height:auto}
+  .timeline::after{height:0;transition:height 1.6s cubic-bezier(.3,.6,.2,1)}
+  .timeline.is-in::after{width:2px;height:calc(100% - 44px)}
+  .step{display:grid;grid-template-columns:44px 1fr;gap:0 20px;padding-bottom:36px}
+  .step h3{margin-top:8px}
+  .step > *:not(.step-num){grid-column:2}
+  .step-num{grid-row:1 / span 4}
+}
+
+/* =========================================================================
+   9. TECH STACK
+   ========================================================================= */
+.tech{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.tech-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.tech-item{display:flex;align-items:center;gap:14px;padding:18px;border-radius:var(--r-md);background:var(--surface);border:1px solid var(--line);transition:border-color .25s,transform .25s}
+.tech-item:hover{border-color:var(--primary);transform:translateY(-2px)}
+.tech-glyph{width:42px;height:42px;flex:none;border-radius:10px;display:grid;place-items:center;font-family:var(--font-display);font-weight:600;font-size:.9rem;color:var(--primary);background:var(--glow)}
+.tech-item b{display:block;font-family:var(--font-display);font-weight:600;font-size:.98rem}
+.tech-item span{display:block;font-size:.83rem;color:var(--muted)}
+@media (max-width:960px){.tech-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:480px){.tech-grid{grid-template-columns:1fr}}
+
+/* =========================================================================
+   11. CTA BANNER
+   ========================================================================= */
+.cta-band{position:relative;overflow:hidden;border-radius:var(--r-xl);padding:clamp(48px,7vw,88px) clamp(28px,6vw,80px);background:linear-gradient(135deg,#1B1A5E 0%,#2B2A8F 45%,#0E5A73 100%);color:#F3F5FF;isolation:isolate}
+.cta-band::before{content:"";position:absolute;inset:0;z-index:-1;background-image:radial-gradient(rgba(255,255,255,.18) 1px,transparent 1.2px);background-size:22px 22px;mask-image:linear-gradient(100deg,transparent 30%,black);-webkit-mask-image:linear-gradient(100deg,transparent 30%,black)}
+.cta-band::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;border:1px solid rgba(255,255,255,.18);box-shadow:0 0 0 60px rgba(255,255,255,.03),0 0 0 120px rgba(255,255,255,.02);z-index:-1}
+.cta-band h2{font-size:clamp(1.9rem,3.6vw,3rem);max-width:20ch}
+.cta-band p{margin-top:18px;max-width:56ch;color:rgba(243,245,255,.82);font-size:1.1rem}
+.cta-band .hero-ctas .btn-primary{background:#FFFFFF;color:#16154A;box-shadow:none}
+.cta-band .hero-ctas .btn-ghost{color:#fff;border-color:rgba(255,255,255,.4)}
+.cta-band .hero-ctas .btn-ghost:hover{background:rgba(255,255,255,.1);border-color:#fff}
+
+/* =========================================================================
+   12. CONTACT
+   ========================================================================= */
+.contact-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px,6vw,96px);align-items:start}
+.contact h2{font-size:clamp(2rem,3.6vw,3.05rem)}
+.contact-info{margin-top:32px;display:grid;gap:14px;list-style:none;padding:0}
+.contact-info li{display:flex;align-items:center;gap:14px}
+.contact-info .ci-icon{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:var(--surface);border:1px solid var(--line);flex:none}
+.contact-info svg{width:19px;height:19px;color:var(--primary)}
+.contact-info small{display:block;color:var(--muted);font-size:.8rem}
+.contact-info a{text-decoration:none;font-weight:600}
+.contact-info a:hover{color:var(--primary)}
+.form{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(24px,4vw,40px);box-shadow:var(--shadow)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{display:flex;flex-direction:column;gap:7px}
+.field.full{grid-column:1 / -1}
+.field label{font-size:.88rem;font-weight:600}
+.field label .opt{color:var(--muted);font-weight:500}
+.field input,.field select,.field textarea{width:100%;min-height:50px;padding:12px 14px;border-radius:var(--r-sm);border:1px solid var(--line-strong);background:var(--bg);transition:border-color .2s,box-shadow .2s}
+.field textarea{min-height:140px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 4px var(--glow)}
+.field.invalid input,.field.invalid select,.field.invalid textarea{border-color:var(--danger)}
+.field .err{font-size:.82rem;color:var(--danger);min-height:1em;display:none}
+.field.invalid .err{display:block}
+.form-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;margin-top:24px}
+.form-foot small{color:var(--muted);font-size:.84rem;max-width:36ch}
+.form-success{display:none;text-align:left}
+.form.sent .form-body{display:none}
+.form.sent .form-success{display:block}
+.success-icon{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:color-mix(in srgb,var(--success) 14%,transparent);color:var(--success);margin-bottom:20px}
+.success-icon svg{width:26px;height:26px}
+.form-success h3{font-size:1.5rem}
+.form-success p{margin-top:10px;color:var(--muted)}
+@media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
+@media (max-width:560px){.form-grid{grid-template-columns:1fr}}
+
+/* =========================================================================
+   13. FOOTER
+   ========================================================================= */
+.site-footer{padding:64px 0 40px;border-top:1px solid var(--line)}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}
+.footer-grid p{margin-top:14px;color:var(--muted);max-width:40ch;font-size:.95rem}
+.footer-grid h3{font-size:.9rem;margin-bottom:14px}
+.footer-links{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.footer-links a{text-decoration:none;color:var(--muted);font-size:.95rem}
+.footer-links a:hover{color:var(--text)}
+.socials{display:flex;gap:10px}
+.footer-bottom{margin-top:48px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.86rem;color:var(--muted)}
+@media (max-width:760px){.footer-grid{grid-template-columns:1fr 1fr}.footer-grid > :first-child{grid-column:1 / -1}}
+
+/* =========================================================================
+   14. MODALS (native <dialog>)
+   ========================================================================= */
+dialog.modal{width:min(1000px,calc(100% - 24px));max-height:calc(100dvh - 32px);padding:0;border:1px solid var(--line-strong);border-radius:var(--r-lg);background:var(--surface);color:var(--text);box-shadow:var(--shadow-lg);overflow:hidden}
+dialog.modal[open]{display:flex;flex-direction:column;animation:modalIn .35s cubic-bezier(.2,.7,.2,1)}
+dialog.modal::backdrop{background:rgba(5,8,20,.62);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+@keyframes modalIn{from{opacity:0;transform:translateY(16px) scale(.985)}to{opacity:1;transform:none}}
+.modal-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:22px clamp(20px,3vw,32px);border-bottom:1px solid var(--line);flex:none}
+.modal-head h2{font-size:clamp(1.25rem,2.2vw,1.6rem)}
+.modal-head .tag{margin-bottom:10px}
+.modal-body{padding:clamp(20px,3vw,32px);overflow:auto;overscroll-behavior:contain}
+.modal-cols{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.modal-block h3{font-size:.95rem;margin-bottom:8px}
+.modal-block p{color:var(--muted);font-size:.97rem}
+.modal-sep{height:1px;background:var(--line);margin:28px 0}
+@media (max-width:760px){.modal-cols{grid-template-columns:1fr}}
+
+/* Architecture diagram */
+.arch{display:grid;gap:10px;counter-reset:layer}
+.arch-layer{display:grid;grid-template-columns:170px 1fr;align-items:center;gap:14px;padding:14px 16px;border-radius:var(--r-sm);border:1px solid var(--line);background:linear-gradient(90deg,color-mix(in srgb,var(--primary) calc(var(--depth) * 1%),transparent),transparent 70%);position:relative}
+.arch-layer:not(:last-child)::after{content:"";position:absolute;left:32px;bottom:-11px;width:2px;height:10px;background:var(--primary);opacity:.6}
+.arch-name{font-family:var(--font-display);font-weight:600;font-size:.9rem}
+.arch-items{display:flex;flex-wrap:wrap;gap:6px}
+.arch-items span{font-size:.8rem;padding:4px 10px;border-radius:var(--r-xs);background:var(--surface);border:1px solid var(--line-strong)}
+@media (max-width:560px){.arch-layer{grid-template-columns:1fr;gap:8px}}
+
+/* =========================================================================
+   15. DEMOS
+   ========================================================================= */
+.demo-note{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;color:var(--muted);margin-top:6px}
+.demo-grid{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:28px}
+.demo-q-label{font-size:.85rem;font-weight:600;margin-bottom:10px}
+.q-list{display:grid;gap:8px}
+.q-btn{text-align:left;padding:12px 14px;border-radius:var(--r-sm);border:1px solid var(--line-strong);background:var(--bg);cursor:pointer;font-size:.92rem;line-height:1.45;transition:border-color .2s,background-color .2s}
+.q-btn:hover{border-color:var(--primary)}
+.q-btn[aria-pressed="true"]{border-color:var(--primary);background:var(--glow)}
+.q-btn:disabled{cursor:progress}
+.pipeline{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.pl-step{display:grid;grid-template-columns:28px minmax(0,1fr);gap:0 14px;position:relative;padding-bottom:18px}
+.pl-step:not(:last-child)::before{content:"";position:absolute;left:13px;top:28px;bottom:0;width:2px;background:var(--line-strong)}
+.pl-step.done:not(:last-child)::before{background:var(--primary)}
+.pl-dot{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;border:2px solid var(--line-strong);background:var(--surface);position:relative;z-index:1}
+.pl-dot svg{width:14px;height:14px;opacity:0}
+.pl-step.running .pl-dot{border-color:var(--accent)}
+.pl-step.running .pl-dot::after{content:"";position:absolute;inset:-2px;border-radius:50%;border:2px solid transparent;border-top-color:var(--accent);animation:spin .8s linear infinite}
+.pl-step.done .pl-dot{border-color:var(--primary);background:var(--primary);color:var(--primary-ink)}
+.pl-step.done .pl-dot svg{opacity:1}
+@keyframes spin{to{transform:rotate(360deg)}}
+.pl-title{font-weight:600;font-size:.95rem;padding-top:3px;color:var(--muted)}
+.pl-step.running .pl-title,.pl-step.done .pl-title{color:var(--text)}
+.pl-detail{grid-column:2;font-size:.86rem;color:var(--muted);margin-top:6px}
+.pl-detail:empty{display:none}
+.demo-empty{padding:40px 20px;text-align:center;color:var(--muted);border:1px dashed var(--line-strong);border-radius:var(--r-md);font-size:.95rem}
+.score-row{display:grid;grid-template-columns:minmax(0,1fr) 110px;gap:10px;align-items:center;padding:6px 0;border-bottom:1px solid var(--line);font-size:.82rem;transition:opacity .4s}
+.score-row.dropped{opacity:.35}
+.score-row .doc{color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bars{display:grid;gap:3px}
+.bar{height:5px;border-radius:3px;background:var(--line);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--primary);width:0;transition:width .7s cubic-bezier(.2,.7,.2,1)}
+.bar.v i{background:var(--accent)}
+.bar-legend{display:flex;gap:14px;font-size:.76rem;margin-bottom:4px}
+.bar-legend span{display:inline-flex;align-items:center;gap:6px}
+.bar-legend span::before{content:"";width:10px;height:4px;border-radius:2px;background:var(--primary)}
+.bar-legend span.v::before{background:var(--accent)}
+.answer{margin-top:22px;padding:20px;border-radius:var(--r-md);background:var(--bg);border:1px solid var(--line)}
+.answer h4{font-family:var(--font-display);font-size:.95rem;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.answer p{font-size:.98rem;color:var(--text)}
+.cite{display:inline-grid;place-items:center;min-width:20px;height:20px;padding:0 5px;margin:0 2px;border-radius:5px;background:var(--glow);color:var(--primary);font-size:.72rem;font-weight:700;vertical-align:1px}
+.sources{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:16px}
+.source{padding:12px 14px;border-radius:var(--r-sm);border:1px solid var(--line);background:var(--surface);font-size:.84rem}
+.source b{display:flex;gap:8px;align-items:center;font-size:.86rem;margin-bottom:4px}
+.source span{color:var(--muted)}
+.eval-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.eval-chip{font-family:var(--font-mono);font-size:.74rem;padding:4px 10px;border-radius:999px;border:1px solid color-mix(in srgb,var(--success) 35%,transparent);color:var(--success)}
+.code{position:relative;margin-top:10px;padding:16px;border-radius:var(--r-sm);background:#0A0F22;color:#DCE3FF;font-family:var(--font-mono);font-size:.8rem;line-height:1.6;white-space:pre-wrap;word-break:break-word;overflow:auto;border:1px solid rgba(150,165,215,.18)}
+.code .k{color:#A5A8FF}.code .s{color:#7EE8C8}.code .n{color:#F5C878}
+.checks{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:5px}
+.checks li{display:flex;gap:8px;align-items:center;opacity:.35;transition:opacity .3s}
+.checks li.ok{opacity:1}
+.checks li svg{width:14px;height:14px;color:var(--success)}
+.validated{display:inline-flex;align-items:center;gap:6px;margin-top:10px;padding:5px 12px;border-radius:999px;font-size:.8rem;font-weight:700;color:var(--success);background:color-mix(in srgb,var(--success) 12%,transparent)}
+.validated svg{width:14px;height:14px}
+.table-wrap{overflow-x:auto;margin-top:12px;border:1px solid var(--line);border-radius:var(--r-sm)}
+table.res{width:100%;border-collapse:collapse;font-size:.86rem}
+table.res th,table.res td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+table.res th{font-size:.78rem;color:var(--muted);font-weight:600;background:var(--surface-2)}
+table.res td.num,table.res th.num{text-align:right;font-variant-numeric:tabular-nums}
+table.res tr:last-child td{border-bottom:0}
+.results-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:8px}
+.chart-box{border:1px solid var(--line);border-radius:var(--r-sm);padding:14px;background:var(--bg);margin-top:12px}
+.chart-box svg{width:100%;height:auto}
+.chart-box text{font-family:var(--font-body);fill:var(--muted);font-size:11px}
+.run-meta{font-family:var(--font-mono);font-size:.76rem;color:var(--muted);margin-top:8px}
+@media (max-width:860px){.demo-grid{grid-template-columns:1fr}.results-grid{grid-template-columns:1fr}}
+
+/* Forecast simulator */
+.fc-grid{display:grid;grid-template-columns:minmax(0,280px) minmax(0,1fr);gap:28px}
+.slider{margin-bottom:22px}
+.slider label{display:flex;justify-content:space-between;font-size:.9rem;font-weight:600;margin-bottom:10px}
+.slider output{font-family:var(--font-mono);font-weight:500;color:var(--primary)}
+.slider small{display:block;font-size:.78rem;color:var(--muted);margin-top:6px}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:3px;background:var(--line-strong);outline-offset:6px}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:var(--surface);border:3px solid var(--primary);cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:var(--surface);border:3px solid var(--primary);cursor:pointer}
+.fc-legend{display:flex;flex-wrap:wrap;gap:16px;font-size:.82rem;color:var(--muted);margin-top:10px}
+.fc-legend span{display:inline-flex;align-items:center;gap:8px}
+.fc-legend i{width:18px;height:3px;border-radius:2px;display:inline-block}
+.fc-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+.fc-stat{padding:12px 14px;border-radius:var(--r-sm);border:1px solid var(--line);background:var(--bg)}
+.fc-stat small{display:block;font-size:.76rem;color:var(--muted)}
+.fc-stat b{font-family:var(--font-display);font-size:1.15rem;font-weight:600}
+.fc-stat b.up{color:var(--success)}.fc-stat b.down{color:var(--danger)}
+.fc-summary{margin-top:14px;padding:16px;border-radius:var(--r-sm);background:var(--glow);font-size:.95rem}
+@media (max-width:860px){.fc-grid{grid-template-columns:1fr}.fc-stats{grid-template-columns:1fr}}
+
+/* Demo 4 + 5 extras */
+.flag{display:inline-flex;padding:2px 8px;border-radius:999px;font-size:.72rem;font-weight:700;color:var(--danger);background:color-mix(in srgb,var(--danger) 12%,transparent)}
+.flag.ok{color:var(--success);background:color-mix(in srgb,var(--success) 12%,transparent)}
+.flag.warn{color:var(--amber);background:color-mix(in srgb,var(--amber) 14%,transparent)}
+.trend-row{display:flex;gap:12px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line)}
+.trend-row.excluded{opacity:.6}
+.trend-row b{color:var(--text)}
+.spark{flex:none}
+.campaign{padding:14px;border-radius:var(--r-sm);border:1px solid var(--line);background:var(--bg);display:grid;gap:6px}
+.campaign small{color:var(--muted)}
+.campaign > b{font-family:var(--font-display);font-size:1rem;color:var(--text)}
+.kv{display:grid;grid-template-columns:130px 1fr;gap:10px;font-size:.84rem;padding:4px 0}
+.kv > span:first-child{color:var(--muted)}
+.kv > span:last-child{color:var(--text)}
+.kvs .kv{border-bottom:1px solid var(--line);animation:traceIn .3s forwards}
+.conf{font-style:normal;font-family:var(--font-mono);font-size:.72rem;color:var(--success);margin-left:6px}
+.conf.warn{color:var(--amber)}
+.seg{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.seg b{color:var(--text);font-variant-numeric:tabular-nums;margin-right:4px}
+.paper{background:#FFFFFF;color:#1B2140;border-radius:var(--r-sm);padding:16px;font-size:.78rem;box-shadow:var(--shadow);border:1px solid var(--line)}
+.paper-head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid #1B2140;padding-bottom:8px;margin-bottom:8px}
+.paper-head b{font-family:var(--font-display);font-size:.95rem}
+.paper-head span{color:#6B7280}
+.paper-meta{display:flex;flex-wrap:wrap;gap:4px 14px;margin-bottom:8px;color:#6B7280}
+.paper-meta b{color:#1B2140}
+.paper table{width:100%;border-collapse:collapse}
+.paper th{text-align:left;color:#6B7280;font-weight:600;border-bottom:1px solid #E5E7EB;padding:4px 2px}
+.paper td{padding:4px 2px;border-bottom:1px solid #F1F2F6}
+.paper .num{text-align:right}
+.paper-tot{display:grid;grid-template-columns:1fr auto;gap:2px 12px;margin-top:8px;justify-items:end}
+.paper-tot span{color:#6B7280}
+.paper .hl{background:rgba(34,211,238,.22);box-shadow:0 0 0 2px rgba(14,143,174,.45);border-radius:3px;transition:background-color .3s,box-shadow .3s}
+.paper tr.hl{box-shadow:inset 0 0 0 2px rgba(14,143,174,.35)}
+.exception{padding:18px;border-radius:var(--r-md);border:1px solid color-mix(in srgb,var(--amber) 40%,transparent);background:color-mix(in srgb,var(--amber) 7%,transparent)}
+.exception p{margin-top:6px;font-size:.93rem}
+@keyframes traceIn{from{opacity:0;transform:translateX(-4px)}to{opacity:1;transform:none}}
+@media (max-width:860px){.fc-stats[style]{grid-template-columns:repeat(2,1fr)!important}}
+.btn-gh svg{flex:none}
+
+/* =========================================================================
+   16. REDUCED MOTION
+   ========================================================================= */
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  .js [data-reveal]{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<!-- LOGO SPRITE: folded-ribbon "M" on a dark tile; the fold facets give depth, the spark marks the "mind" -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<defs>
+<linearGradient id="mm-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1B1F4B"/><stop offset="1" stop-color="#070B18"/></linearGradient>
+<linearGradient id="mm-rim" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A5B4FC" stop-opacity=".9"/><stop offset=".5" stop-color="#6366F1" stop-opacity=".25"/><stop offset="1" stop-color="#22D3EE" stop-opacity=".8"/></linearGradient>
+<linearGradient id="mm-f1" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#C7D2FE"/></linearGradient>
+<linearGradient id="mm-f2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#312E81"/><stop offset="1" stop-color="#4338CA"/></linearGradient>
+<linearGradient id="mm-f3" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#0EA5E9"/><stop offset="1" stop-color="#A5F3FC"/></linearGradient>
+<linearGradient id="mm-f4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0891B2"/><stop offset="1" stop-color="#155E75"/></linearGradient>
+<radialGradient id="mm-glow"><stop offset="0" stop-color="#22D3EE" stop-opacity=".9"/><stop offset="1" stop-color="#22D3EE" stop-opacity="0"/></radialGradient>
+<radialGradient id="mm-sheen" cx=".25" cy=".1" r=".9"><stop offset="0" stop-color="#6366F1" stop-opacity=".45"/><stop offset="1" stop-color="#6366F1" stop-opacity="0"/></radialGradient>
+</defs>
+<symbol id="mm-logo" viewBox="0 0 48 48">
+<rect x="1" y="1" width="46" height="46" rx="13" fill="url(#mm-bg)"/>
+<rect x="1" y="1" width="46" height="46" rx="13" fill="url(#mm-sheen)"/>
+<circle cx="24" cy="24" r="17.5" fill="none" stroke="#fff" stroke-opacity=".07"/>
+<path d="M9.5 16.5A16 16 0 0 1 38.5 16.5" fill="none" stroke="#22D3EE" stroke-opacity=".35" stroke-width=".8" stroke-dasharray="1.2 2"/>
+<circle cx="24" cy="28" r="10" fill="url(#mm-glow)" opacity=".55"/>
+<path d="M16.60,36.00L16.60,24.75L10.40,8.25L10.40,36.00Z" fill="url(#mm-f1)"/>
+<path d="M16.60,24.75L24.00,33.21L24.00,23.79L10.40,8.25Z" fill="url(#mm-f2)"/>
+<path d="M24.00,33.21L31.40,24.75L37.60,8.25L24.00,23.79Z" fill="url(#mm-f3)"/>
+<path d="M31.40,24.75L31.40,36.00L37.60,36.00L37.60,8.25Z" fill="url(#mm-f4)"/>
+<path d="M16.60,24.75L10.40,8.25M24.00,33.21L24.00,23.79M31.40,24.75L37.60,8.25" stroke="#fff" stroke-opacity=".55" stroke-width=".6"/>
+<path d="M24 8.6l1 2.7 2.7 1-2.7 1L24 16l-1-2.7-2.7-1 2.7-1z" fill="#F5C878"/>
+<rect x="1.5" y="1.5" width="45" height="45" rx="12.5" fill="none" stroke="url(#mm-rim)"/>
+</symbol>
+</svg>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- =====================================================================
+     HEADER
+     ===================================================================== -->
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a href="#top" class="logo" aria-label="Magnum Minds AI, back to top">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><use href="#mm-logo"/></svg>
+      <span class="logo-word">Magnum Minds<span>AI</span></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#solutions">Solutions</a>
+      <a href="#projects">Projects</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn theme-toggle" type="button" aria-label="Switch colour theme">
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+      <a href="#contact" class="btn btn-primary btn-sm">Book a Discovery Call</a>
+      <button class="icon-btn menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+  <a href="#solutions">Solutions</a>
+  <a href="#projects">Projects</a>
+  <a href="#process">Process</a>
+  <a href="#contact">Contact</a>
+  <a href="#contact" class="btn btn-primary">Book a Discovery Call</a>
+</nav>
+
+<main id="main">
+
+<!-- =====================================================================
+     HERO
+     ===================================================================== -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-visual" aria-hidden="true">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-fallback"></div>
+  </div>
+  <div class="wrap hero-grid">
+    <div>
+      <h1 id="hero-title">AI systems that do real work inside your business.</h1>
+      <p class="hero-sub">We design and deploy custom AI agents, RAG knowledge systems, and machine learning models that plug into the data and tools you already use, so your teams spend less time searching, waiting and re-keying, and more time on decisions that grow revenue.</p>
+      <div class="hero-ctas">
+        <a href="#projects" class="btn btn-primary">Explore Our Projects</a>
+        <a href="#contact" class="btn btn-ghost">Book a Discovery Call</a>
+      </div>
+      <ul class="hero-points">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Built for your data</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Works with your stack</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Secure by design</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     WHY MAGNUM MINDS AI
+     ===================================================================== -->
+<section class="why section" aria-labelledby="why-title">
+  <div class="wrap why-grid">
+    <div class="why-intro" data-reveal>
+      <h2 id="why-title">Most AI projects stall between the demo and daily use.</h2>
+      <p>Generic tools don't know your business, pilots never touch real systems, and nobody can say what the spend returned. We build the other way round: start from one costly problem, connect to the data you already have, and prove the value before anything scales.</p>
+    </div>
+    <div data-reveal>
+      <div class="why-cols" aria-hidden="true"><span>Where it usually breaks</span><span>How we build it</span></div>
+      <div class="why-row">
+        <p class="broken">Off-the-shelf tools give generic answers that ignore how your business actually runs.</p>
+        <div class="fix">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg>Custom-built</h3>
+          <p>Each system is designed around your workflows, terminology and decisions, not bolted on from a template.</p>
+        </div>
+      </div>
+      <div class="why-row">
+        <p class="broken">Pilots live in a sandbox and never reach the ERP, warehouse or inbox where the work happens.</p>
+        <div class="fix">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 7H6a3 3 0 0 0 0 6h3M15 7h3a3 3 0 0 1 0 6h-3M8 10h8"/><path d="M12 13v7"/></svg>Integrates with existing systems</h3>
+          <p>We connect to your databases, documents and tools through governed APIs, so nothing needs to be ripped out.</p>
+        </div>
+      </div>
+      <div class="why-row">
+        <p class="broken">Security and access control are left for later, and later becomes a blocker.</p>
+        <div class="fix">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg>Secure by design</h3>
+          <p>Role-based access, read-only data paths, validation checks and full audit trails are part of the first build.</p>
+        </div>
+      </div>
+      <div class="why-row">
+        <p class="broken">Budgets go out, but nobody can say what the AI actually saved or earned.</p>
+        <div class="fix">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19h16"/><path d="M6 15l4-4 3 3 5-6"/><path d="M15 8h3v3"/></svg>Measurable ROI</h3>
+          <p>We agree success metrics up front, whether hours saved, costs cut or revenue gained, and report against them.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     SOLUTIONS
+     ===================================================================== -->
+<section class="section" id="solutions" aria-labelledby="sol-title">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <h2 id="sol-title">Solutions that meet your business where it is.</h2>
+      <p>Six ways we put AI to work, each delivered as a production system your team can rely on, not a slide deck.</p>
+    </div>
+    <div class="sol-grid" data-reveal>
+      <article class="sol">
+        <div class="sol-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2.2"/><circle cx="5" cy="18" r="2.2"/><circle cx="19" cy="18" r="2.2"/><path d="M12 7.2v4.3M12 11.5L6.6 16.3M12 11.5l5.4 4.8"/></svg></div>
+        <h3>Agentic AI &amp; Automation</h3>
+        <p>AI agents that plan, use your tools and finish multi-step tasks, with a human in the loop where it matters.</p>
+        <ul><li>Order and inventory operations</li><li>Back-office workflows</li><li>Approvals and hand-offs</li></ul>
+      </article>
+      <article class="sol">
+        <div class="sol-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5"/><circle cx="11.5" cy="14" r="2.8"/><path d="M13.6 16.1L16 18.5"/></svg></div>
+        <h3>Enterprise RAG &amp; Knowledge Systems</h3>
+        <p>Ask questions of your policies, contracts and manuals and get accurate answers with sources you can check.</p>
+        <ul><li>Policy and HR assistants</li><li>Sales and support knowledge</li><li>Access-aware search</li></ul>
+      </article>
+      <article class="sol">
+        <div class="sol-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="6" rx="7" ry="2.8"/><path d="M5 6v6c0 1.5 3.1 2.8 7 2.8s7-1.3 7-2.8V6"/><path d="M5 12v6c0 1.5 3.1 2.8 7 2.8"/><path d="M16 17.5h5M19 15l2 2.5-2 2.5"/></svg></div>
+        <h3>Natural Language Data Analytics</h3>
+        <p>Business users ask questions in plain English and get validated answers from your warehouse in seconds.</p>
+        <ul><li>Self-serve KPIs</li><li>Supply chain and sales queries</li><li>Charts on demand</li></ul>
+      </article>
+      <article class="sol">
+        <div class="sol-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18"/><path d="M4 16l4-5 4 3 4-6"/><path d="M16 8l4-3" stroke-dasharray="2 2.4"/></svg></div>
+        <h3>Predictive Analytics &amp; Forecasting</h3>
+        <p>Demand, churn and risk models that turn historical data into forward-looking decisions you can test.</p>
+        <ul><li>Demand and inventory planning</li><li>Scenario simulation</li><li>Churn and risk scoring</li></ul>
+      </article>
+      <article class="sol">
+        <div class="sol-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1z"/><path d="M15 9a4 4 0 0 1 0 6M18 6.5a8 8 0 0 1 0 11"/></svg></div>
+        <h3>AI-Powered Marketing Automation</h3>
+        <p>Campaigns that segment, write and launch themselves from real customer behaviour and stock levels.</p>
+        <ul><li>Behavioural segmentation</li><li>Personalised campaign copy</li><li>Automated promotions</li></ul>
+      </article>
+      <article class="sol">
+        <div class="sol-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></div>
+        <h3>AI Strategy &amp; Consulting</h3>
+        <p>A clear-eyed view of where AI will pay off in your business, and a practical roadmap to get there.</p>
+        <ul><li>Use-case discovery and sizing</li><li>Data readiness review</li><li>Build, buy or wait advice</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     POC PROJECTS  (cards rendered from the PROJECTS array in the script)
+     ===================================================================== -->
+<section class="projects section" id="projects" aria-labelledby="proj-title">
+  <div class="wrap">
+    <div class="proj-headrow">
+      <div class="section-head" data-reveal>
+        <h2 id="proj-title">Proof-of-concept projects you can try.</h2>
+        <p>Working systems built around real business problems. Open any project for its architecture, or run a live demo to watch the AI work step by step.</p>
+      </div>
+      <span class="synthetic-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.01"/></svg>Demos run on synthetic data.</span>
+    </div>
+    <div class="proj-grid" id="proj-grid"></div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     PROCESS
+     ===================================================================== -->
+<section class="section" id="process" aria-labelledby="process-title">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <h2 id="process-title">From first conversation to a system that keeps improving.</h2>
+      <p>Every engagement moves in small, low-risk steps. You see working software early and decide what happens next based on evidence.</p>
+    </div>
+    <ol class="timeline" id="timeline">
+      <li class="step">
+        <span class="step-num">1</span>
+        <h3>Discovery</h3>
+        <p>We map the problem, the data behind it and what success is worth to you.</p>
+        <p class="deliv"><b>You get:</b> a scoped use case and success metrics.</p>
+      </li>
+      <li class="step">
+        <span class="step-num">2</span>
+        <h3>POC Build</h3>
+        <p>A focused proof of concept on a slice of your real data and systems.</p>
+        <p class="deliv"><b>You get:</b> a working prototype you can use.</p>
+      </li>
+      <li class="step">
+        <span class="step-num">3</span>
+        <h3>Pilot &amp; Validate</h3>
+        <p>Real users, real workflows, measured against the metrics we agreed.</p>
+        <p class="deliv"><b>You get:</b> evidence of value, before you scale.</p>
+      </li>
+      <li class="step">
+        <span class="step-num">4</span>
+        <h3>Full Deployment</h3>
+        <p>Hardened, secured and integrated into production with monitoring in place.</p>
+        <p class="deliv"><b>You get:</b> a production system your team owns.</p>
+      </li>
+      <li class="step">
+        <span class="step-num">5</span>
+        <h3>Ongoing Optimisation</h3>
+        <p>We track quality and cost, retrain where needed and extend to new use cases.</p>
+        <p class="deliv"><b>You get:</b> results that improve over time.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- =====================================================================
+     TECH STACK
+     ===================================================================== -->
+<section class="tech section" aria-labelledby="tech-title">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <h2 id="tech-title">Proven, production-grade technology.</h2>
+      <p>We pick tools for reliability and fit, not hype, and deploy them on infrastructure your IT team already trusts.</p>
+    </div>
+    <ul class="tech-grid" data-reveal>
+      <li class="tech-item"><span class="tech-glyph">Py</span><div><b>Python</b><span>Core language for AI and ML</span></div></li>
+      <li class="tech-item"><span class="tech-glyph">4o</span><div><b>OpenAI GPT-4o</b><span>Reasoning and generation</span></div></li>
+      <li class="tech-item"><span class="tech-glyph">LG</span><div><b>LangGraph</b><span>Multi-agent orchestration</span></div></li>
+      <li class="tech-item"><span class="tech-glyph">LC</span><div><b>LangChain</b><span>LLM tooling and integrations</span></div></li>
+      <li class="tech-item"><span class="tech-glyph">Fa</span><div><b>FAISS</b><span>High-speed vector search</span></div></li>
+      <li class="tech-item"><span class="tech-glyph">Es</span><div><b>Elasticsearch</b><span>Keyword and hybrid search</span></div></li>
+      <li class="tech-item"><span class="tech-glyph">Db</span><div><b>Databricks</b><span>Lakehouse and SQL warehouse</span></div></li>
+      <li class="tech-item"><span class="tech-glyph">Pg</span><div><b>PostgreSQL</b><span>Application and metadata store</span></div></li>
+      <li class="tech-item"><span class="tech-glyph">Fx</span><div><b>FastAPI</b><span>Fast, typed production APIs</span></div></li>
+      <li class="tech-item"><span class="tech-glyph">Dk</span><div><b>Docker</b><span>Portable, repeatable deploys</span></div></li>
+      <li class="tech-item"><span class="tech-glyph">Aw</span><div><b>AWS</b><span>Secure cloud infrastructure</span></div></li>
+      <li class="tech-item"><span class="tech-glyph">Ev</span><div><b>LangSmith &amp; RAGAS</b><span>Tracing and quality evaluation</span></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- =====================================================================
+     FINAL CTA
+     ===================================================================== -->
+<section class="section" style="padding-top:0" aria-labelledby="cta-title">
+  <div class="wrap">
+    <div class="cta-band" data-reveal>
+      <h2 id="cta-title">Have a business problem AI could solve? Let's build a proof of concept.</h2>
+      <p>Tell us where time or money is leaking. We'll come back with an honest view of whether AI can fix it, and what a first build would look like.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-primary">Book a Discovery Call</a>
+        <a href="#projects" class="btn btn-ghost">Explore Our Projects</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     CONTACT
+     ===================================================================== -->
+<section class="contact section" id="contact" aria-labelledby="contact-title" style="padding-top:0">
+  <div class="wrap contact-grid">
+    <div data-reveal>
+      <h2 id="contact-title">Start with a conversation.</h2>
+      <p class="muted" style="margin-top:18px;font-size:1.1rem">A 30-minute discovery call to understand your problem, your data and what a proof of concept could deliver. No obligation, no sales script.</p>
+      <ul class="contact-info">
+        <li><span class="ci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><div><small>Email</small><a id="ci-email" href="#"></a></div></li>
+        <li><span class="ci-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg></span><div><small>GitHub</small><a id="ci-github" href="#" target="_blank" rel="noopener">github.com/Magnummindsai</a></div></li>
+        <li><span class="ci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><div><small>Location</small><span id="ci-location"></span></div></li>
+      </ul>
+    </div>
+
+    <form class="form" id="contact-form" novalidate data-reveal aria-labelledby="contact-title">
+      <div class="form-body">
+        <div class="form-grid">
+          <div class="field">
+            <label for="f-name">Name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name">
+            <span class="err" id="e-name">Enter your name.</span>
+          </div>
+          <div class="field">
+            <label for="f-email">Work email</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="e-email">
+            <span class="err" id="e-email">Enter a valid email address, like name@company.com.</span>
+          </div>
+          <div class="field">
+            <label for="f-company">Company</label>
+            <input id="f-company" name="company" type="text" autocomplete="organization" required aria-describedby="e-company">
+            <span class="err" id="e-company">Enter your company name.</span>
+          </div>
+          <div class="field">
+            <label for="f-interest">Project interest</label>
+            <select id="f-interest" name="interest" required aria-describedby="e-interest"></select>
+            <span class="err" id="e-interest">Choose what you're interested in.</span>
+          </div>
+          <div class="field full">
+            <label for="f-message">What problem would you like to solve?</label>
+            <textarea id="f-message" name="message" required minlength="20" aria-describedby="e-message" placeholder="For example: our planners spend two days a week pulling stock reports from three systems."></textarea>
+            <span class="err" id="e-message">Tell us a little more, at least 20 characters.</span>
+          </div>
+        </div>
+        <div class="form-foot">
+          <small>We reply within one business day. Your details are only used to respond to you.</small>
+          <button class="btn btn-primary" type="submit">Send message</button>
+        </div>
+      </div>
+      <div class="form-success" role="status" aria-live="polite" tabindex="-1">
+        <div class="success-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+        <h3>Your message is ready to send.</h3>
+        <p>Your email app has opened with everything filled in. Press send and we'll reply within one business day.</p>
+        <p>If nothing opened, email us directly at <a id="success-email" href="#"></a>.</p>
+        <button class="btn btn-ghost" type="button" id="form-reset" style="margin-top:22px">Write another message</button>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- =====================================================================
+     FOOTER
+     ===================================================================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="#top" class="logo" aria-label="Magnum Minds AI, back to top">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><use href="#mm-logo"/></svg>
+          <span class="logo-word">Magnum Minds<span>AI</span></span>
+        </a>
+        <p>Building intelligent AI systems that solve real business problems.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul class="footer-links">
+          <li><a href="#solutions">Solutions</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Connect</h3>
+        <div class="socials">
+          <a class="icon-btn" id="ft-github" href="#" target="_blank" rel="noopener" aria-label="Magnum Minds AI on GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg></a>
+          <a class="icon-btn" id="ft-email" href="#" aria-label="Email Magnum Minds AI"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Magnum Minds AI. All rights reserved.</span>
+      <span>Demos on this site run on synthetic data.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- =====================================================================
+     DIALOGS
+     ===================================================================== -->
+<dialog class="modal" id="details-dialog" aria-labelledby="details-title">
+  <div class="modal-head">
+    <div><span class="tag" id="details-cat"></span><h2 id="details-title"></h2></div>
+    <button class="icon-btn" type="button" data-close aria-label="Close project details"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <div class="modal-body" id="details-body"></div>
+</dialog>
+
+<dialog class="modal" id="demo-dialog" aria-labelledby="demo-title">
+  <div class="modal-head">
+    <div><h2 id="demo-title"></h2><span class="demo-note"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.01"/></svg>Demos run on synthetic data.</span></div>
+    <button class="icon-btn" type="button" data-close aria-label="Close demo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <div class="modal-body" id="demo-body"></div>
+</dialog>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+/* =========================================================================
+   SITE CONFIG  (edit contact details here)
+   ========================================================================= */
+const CONFIG = {
+  email: "Magnummindsai@gmail.com",
+  github: "https://github.com/Magnummindsai",
+  location: "India"                                               // TODO: e.g. "City, India"
+};
+
+/* =========================================================================
+   PROJECT DATA  (single source of truth for cards, modals, demos, form)
+   - demo: "rag" | "sql" | "forecast" | "flash" | "invoice" | null   (null = "Demo coming soon")
+   - github: link to the code repository (leave "" to hide the button)
+   - To add a project, append an object. To switch a demo off, set demo: null.
+   ========================================================================= */
+const PROJECTS = [
+  {
+    id: "rag-assistant",
+    github: CONFIG.github + "/enterprise-rag-assistant",
+    name: "Enterprise RAG Knowledge Assistant",
+    subtitle: "with multi-agent orchestration",
+    category: "Generative AI",
+    tags: ["Agentic AI", "Enterprise AI", "NLP"],
+    problem: "Employees lose hours searching scattered documents, and still aren't sure the answer they found is current, correct or meant for them.",
+    solution: "A knowledge assistant that answers questions over company documents with cited sources, with security and access control built into the design.",
+    capabilities: [
+      "Hybrid retrieval: BM25 keyword plus semantic vector search",
+      "Cross-encoder reranking for the most relevant passages",
+      "Multi-agent orchestration with fallback retrieval pipelines",
+      "Source-cited answers with evaluation and tracing"
+    ],
+    tech: ["Python","FastAPI","LangGraph","GPT-4o","FAISS","Elasticsearch","BGE Cross-Encoder","PostgreSQL","RAGAS","LangSmith","Docker","AWS ECS"],
+    impact: "Staff get trusted answers in seconds instead of digging through folders, and every claim links back to its source document.",
+    demo: "rag",
+    arch: [
+      { layer: "Interface", items: ["Chat UI","Slack / Teams","REST API (FastAPI)"] },
+      { layer: "Orchestration", items: ["LangGraph router","Retriever agent","Fallback agent","Answer agent"] },
+      { layer: "Retrieval", items: ["Elasticsearch BM25","FAISS vectors","BGE cross-encoder rerank"] },
+      { layer: "Generation", items: ["GPT-4o","Citation guardrails","Refusal on low confidence"] },
+      { layer: "Data & security", items: ["Document loaders","PostgreSQL metadata","Role-based access filters"] },
+      { layer: "Ops", items: ["RAGAS evaluation","LangSmith tracing","Docker on AWS ECS"] }
+    ]
+  },
+  {
+    id: "nl-sql",
+    github: CONFIG.github + "/supply-chain-nl2sql-agent",
+    name: "Supply Chain Natural Language to SQL Agent",
+    category: "Agentic AI",
+    tags: ["Generative AI", "Enterprise AI", "AI Automation"],
+    problem: "Business users can't get answers on demand, inventory and distribution without waiting days for an analyst to write SQL.",
+    solution: "A multi-agent workflow that turns a plain-English question into a validated, read-only SQL query against governed tables, then returns the answer as a table or chart.",
+    capabilities: [
+      "Schema-aware retrieval of the right tables",
+      "Query planning and SQL generation",
+      "Safety validation before anything runs",
+      "Results as tables or charts"
+    ],
+    tech: ["Python","FastAPI","LangGraph","GPT-4o","FAISS","Databricks SQL Warehouse","Delta Lake","PostgreSQL","Redis","LangSmith","Docker","AWS ECS"],
+    impact: "Planners and managers answer their own questions on the spot, and analysts get their time back for deeper work.",
+    demo: "sql",
+    arch: [
+      { layer: "Interface", items: ["Web app / chat","FastAPI"] },
+      { layer: "Agents (LangGraph)", items: ["Schema retriever","Query planner","SQL writer","Safety validator"] },
+      { layer: "Knowledge", items: ["FAISS schema index","Business glossary","Redis cache"] },
+      { layer: "Data", items: ["Databricks SQL Warehouse","Delta Lake gold tables (read-only)","PostgreSQL audit log"] },
+      { layer: "Ops", items: ["LangSmith tracing","Docker","AWS ECS"] }
+    ]
+  },
+  {
+    id: "forecast-sim",
+    github: CONFIG.github + "/ai-forecast-simulator",
+    name: "AI Forecast Simulator",
+    category: "Machine Learning",
+    tags: ["Enterprise AI", "Forecasting"],
+    problem: "Leaders need to see how pricing, promotions and market shifts will change demand before they commit budget.",
+    solution: "An interactive tool that shows historical demand, fits a baseline forecast, and lets users adjust assumptions to compare scenarios against the baseline.",
+    capabilities: [
+      "Historical demand visualisation",
+      "Time-series baseline with holdout evaluation",
+      "Scenario simulation with visible controls",
+      "Side-by-side comparison in plain language"
+    ],
+    tech: ["Python","Time-Series ML","FastAPI","PostgreSQL","React"],
+    impact: "Teams test pricing and promotion decisions before spending, with the baseline always in view.",
+    demo: "forecast",
+    arch: [
+      { layer: "Interface", items: ["React scenario UI","Live charts"] },
+      { layer: "Service", items: ["FastAPI","Scenario engine"] },
+      { layer: "Models", items: ["Trend + seasonality baseline","Price elasticity layer","Promotion uplift layer","Holdout evaluation"] },
+      { layer: "Data", items: ["PostgreSQL sales history","Calendar and promo data"] }
+    ]
+  },
+  {
+    id: "flash-sale",
+    github: CONFIG.github + "/flash-sale-coordinator",
+    name: "Predictive Inventory & Automated Flash-Sale Coordinator",
+    category: "Agentic AI",
+    tags: ["E-commerce", "Marketing Automation", "Predictive Analytics"],
+    problem: "Slow-moving stock ties up capital and adds storage overhead, and clearing it by hand is slow and hit-and-miss.",
+    solution: "An autonomous agent that syncs with warehouse data to find slow-moving stock, checks sales history and trends, designs targeted promotions, segments customers by behaviour and launches automated flash sales.",
+    capabilities: [
+      "Real-time warehouse data sync",
+      "Slow-moving stock detection",
+      "Trend-based demand analysis",
+      "AI-designed campaigns with smart email segmentation",
+      "Automated flash-sale launch and performance tracking"
+    ],
+    tech: ["Python","LangGraph","GPT-4o","XGBoost","PostgreSQL","Warehouse / ERP APIs","Email platform API","Docker","AWS"],
+    impact: "Frees tied-up capital, cuts holding costs, and turns dead stock into revenue with minimal manual effort.",
+    demo: "flash",
+    arch: [
+      { layer: "Interface", items: ["Ops dashboard","Approval step before launch"] },
+      { layer: "Agents", items: ["Inventory monitor","Demand analyst","Campaign designer","Segmenter","Launcher"] },
+      { layer: "Models", items: ["Slow-mover detection","Demand forecast","LLM campaign copy"] },
+      { layer: "Integrations", items: ["Warehouse / ERP","E-commerce store","Email platform"] },
+      { layer: "Data", items: ["PostgreSQL","Sales and event history"] }
+    ]
+  },
+  {
+    // Project 5: replace this entry with your own project when ready.
+    id: "doc-agent",
+    github: CONFIG.github + "/invoice-processing-agent",
+    name: "Intelligent Invoice & Document Processing Agent",
+    category: "Agentic AI",
+    tags: ["Document AI", "Finance Operations", "AI Automation"],
+    problem: "Finance teams re-key data from invoices and purchase orders by hand, which is slow, error-prone and delays month-end close.",
+    solution: "An agent that reads incoming invoices and POs from email or upload, extracts every field, matches them against purchase orders and receipts, flags mismatches for review and posts clean records to the ERP.",
+    capabilities: [
+      "Reads PDFs, scans and email attachments",
+      "Field extraction with vision-language models",
+      "Three-way matching against POs and receipts",
+      "Exception queue with human review",
+      "Posts approved records to your ERP"
+    ],
+    tech: ["Python","FastAPI","LangGraph","GPT-4o Vision","OCR","PostgreSQL","ERP APIs","Docker","AWS"],
+    impact: "Removes manual data entry, shortens the close, and catches mismatches before money leaves the business.",
+    demo: "invoice",
+    arch: [
+      { layer: "Intake", items: ["Email inbox","Upload portal","Shared drive"] },
+      { layer: "Agents", items: ["Classifier","Extractor","Matcher","Poster"] },
+      { layer: "Models", items: ["OCR","GPT-4o Vision","Validation rules"] },
+      { layer: "Review", items: ["Exception queue","Human approval"] },
+      { layer: "Integrations & data", items: ["ERP / accounting","PostgreSQL audit trail"] }
+    ]
+  }
+];
+
+/* =========================================================================
+   UTILITIES
+   ========================================================================= */
+document.documentElement.classList.add("js");
+const $ = (s, el = document) => el.querySelector(s);
+const $$ = (s, el = document) => [...el.querySelectorAll(s)];
+const RM = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const wait = ms => new Promise(r => setTimeout(r, RM ? Math.min(ms, 60) : ms));
+const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+const ICON_CHECK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+const ICON_GH = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="16" height="16"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>';
+const ghBtn = (p, cls) => p.github ? `<a class="btn btn-ghost ${cls} btn-gh" href="${esc(p.github)}" target="_blank" rel="noopener" aria-label="View the code for ${esc(p.name)} on GitHub (opens in a new tab)">${ICON_GH}View code</a>` : "";
+const ICON_CAP = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+
+/* =========================================================================
+   THEME TOGGLE
+   ========================================================================= */
+(function theme(){
+  try { const t = localStorage.getItem("mm-theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch(e){}
+  $(".theme-toggle").addEventListener("click", () => {
+    const cur = document.documentElement.dataset.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    const next = cur === "dark" ? "light" : "dark";
+    document.documentElement.dataset.theme = next;
+    try { localStorage.setItem("mm-theme", next); } catch(e){}
+    document.dispatchEvent(new CustomEvent("themechange"));
+  });
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => document.dispatchEvent(new CustomEvent("themechange")));
+})();
+
+/* =========================================================================
+   HEADER: scroll state, mobile menu, active nav link
+   ========================================================================= */
+(function header(){
+  const h = $(".site-header");
+  const onScroll = () => h.classList.toggle("scrolled", scrollY > 8);
+  addEventListener("scroll", onScroll, { passive: true }); onScroll();
+
+  const btn = $(".menu-btn"), menu = $("#mobile-nav");
+  const setOpen = open => { menu.classList.toggle("open", open); btn.setAttribute("aria-expanded", open); btn.setAttribute("aria-label", open ? "Close menu" : "Open menu"); };
+  btn.addEventListener("click", () => setOpen(!menu.classList.contains("open")));
+  $$("a", menu).forEach(a => a.addEventListener("click", () => setOpen(false)));
+  addEventListener("keydown", e => { if (e.key === "Escape" && menu.classList.contains("open")) { setOpen(false); btn.focus(); } });
+
+  const links = $$(".nav a");
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (en.isIntersecting) links.forEach(l => l.setAttribute("aria-current", l.getAttribute("href") === "#" + en.target.id ? "true" : "false"));
+    });
+  }, { rootMargin: "-45% 0px -50% 0px" });
+  ["solutions","projects","process","contact"].forEach(id => io.observe(document.getElementById(id)));
+})();
+
+/* =========================================================================
+   SCROLL REVEAL (subtle; disabled for reduced motion via CSS)
+   ========================================================================= */
+(function reveal(){
+  const io = new IntersectionObserver(entries => entries.forEach(en => {
+    if (en.isIntersecting) { en.target.classList.add("is-in"); io.unobserve(en.target); }
+  }), { threshold: .12 });
+  $$("[data-reveal]").forEach(el => io.observe(el));
+  io.observe($("#timeline"));
+})();
+
+/* =========================================================================
+   HERO 3D: neural lattice (three.js)
+   - Fibonacci-sphere nodes + inner nodes, nearest-neighbour edges,
+     signal pulses travelling along edges, wireframe core, dashed orbits.
+   ========================================================================= */
+(function hero3D(){
+  const canvas = $("#hero-canvas");
+  let gl = null;
+  try { gl = window.THREE && (canvas.getContext("webgl2") || canvas.getContext("webgl")); } catch(e){}
+  if (!gl) { document.documentElement.classList.add("no-webgl"); return; }
+
+  const T = THREE;
+  const renderer = new T.WebGLRenderer({ canvas, context: gl, antialias: true, alpha: true });
+  renderer.setPixelRatio(Math.min(devicePixelRatio || 1, 2));
+  const scene = new T.Scene();
+  const camera = new T.PerspectiveCamera(42, 1, .1, 100);
+  camera.position.set(0, 0, 11);
+  const root = new T.Group(); scene.add(root);
+  const lattice = new T.Group(); root.add(lattice);
+
+  const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim() || "#7C7FF7";
+  const isDark = () => { const t = document.documentElement.dataset.theme; return t ? t === "dark" : matchMedia("(prefers-color-scheme: dark)").matches; };
+
+  // seeded random for a stable composition
+  let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+
+  // ---- nodes
+  const nodes = [];
+  const N_OUT = 190, R = 3.3;
+  for (let i = 0; i < N_OUT; i++){
+    const y = 1 - (i / (N_OUT - 1)) * 2, r = Math.sqrt(1 - y*y), th = i * 2.39996;
+    const j = 1 + (rnd() - .5) * .16;
+    nodes.push(new T.Vector3(Math.cos(th) * r * R * j, y * R * j, Math.sin(th) * r * R * j));
+  }
+  for (let i = 0; i < 46; i++){
+    const v = new T.Vector3(rnd()-.5, rnd()-.5, rnd()-.5).normalize().multiplyScalar(1.5 + rnd() * 1.2);
+    nodes.push(v);
+  }
+  // ---- edges (k nearest within threshold)
+  const edges = [];
+  const seen = new Set();
+  nodes.forEach((a, i) => {
+    const d = nodes.map((b, j) => [j, a.distanceTo(b)]).filter(x => x[0] !== i).sort((p, q) => p[1] - q[1]).slice(0, 3);
+    d.forEach(([j, dist]) => {
+      if (dist > 1.55) return;
+      const key = i < j ? i + "-" + j : j + "-" + i;
+      if (!seen.has(key)) { seen.add(key); edges.push([i, j]); }
+    });
+  });
+
+  // ---- glowing point shader
+  const pointMat = (opacity) => new T.ShaderMaterial({
+    transparent: true, depthWrite: false, blending: T.AdditiveBlending,
+    uniforms: { uTime: { value: 0 }, uPR: { value: renderer.getPixelRatio() }, uOpacity: { value: opacity } },
+    vertexShader: `
+      attribute float aSize; attribute vec3 aColor; attribute float aPhase;
+      uniform float uTime; uniform float uPR;
+      varying vec3 vColor; varying float vAlpha;
+      void main(){
+        vec4 mv = modelViewMatrix * vec4(position, 1.0);
+        gl_Position = projectionMatrix * mv;
+        float tw = 0.7 + 0.3 * sin(uTime * 1.6 + aPhase);
+        gl_PointSize = aSize * uPR * tw * (11.0 / -mv.z);
+        vColor = aColor;
+        vAlpha = clamp(1.25 - (-mv.z - 8.0) / 6.0, 0.25, 1.0);
+      }`,
+    fragmentShader: `
+      uniform float uOpacity; varying vec3 vColor; varying float vAlpha;
+      void main(){
+        float d = length(gl_PointCoord - 0.5);
+        float a = smoothstep(0.5, 0.0, d);
+        a = pow(a, 1.7);
+        gl_FragColor = vec4(vColor, a * vAlpha * uOpacity);
+      }`
+  });
+
+  const nGeo = new T.BufferGeometry();
+  const nPos = new Float32Array(nodes.length * 3), nCol = new Float32Array(nodes.length * 3), nSize = new Float32Array(nodes.length), nPh = new Float32Array(nodes.length);
+  nodes.forEach((v, i) => { nPos.set([v.x, v.y, v.z], i*3); nSize[i] = (i < N_OUT ? 9 : 7) + rnd() * 9; nPh[i] = rnd() * 6.28; });
+  nGeo.setAttribute("position", new T.BufferAttribute(nPos, 3));
+  nGeo.setAttribute("aColor", new T.BufferAttribute(nCol, 3));
+  nGeo.setAttribute("aSize", new T.BufferAttribute(nSize, 1));
+  nGeo.setAttribute("aPhase", new T.BufferAttribute(nPh, 1));
+  const nMat = pointMat(1); const points = new T.Points(nGeo, nMat); lattice.add(points);
+
+  const eGeo = new T.BufferGeometry();
+  const ePos = new Float32Array(edges.length * 6);
+  edges.forEach(([a, b], k) => { const A = nodes[a], B = nodes[b]; ePos.set([A.x, A.y, A.z, B.x, B.y, B.z], k*6); });
+  eGeo.setAttribute("position", new T.BufferAttribute(ePos, 3));
+  const eMat = new T.LineBasicMaterial({ transparent: true, opacity: .22, depthWrite: false });
+  lattice.add(new T.LineSegments(eGeo, eMat));
+
+  // ---- pulses travelling along edges
+  const P = 56;
+  const pulses = Array.from({ length: P }, () => ({ e: Math.floor(rnd() * edges.length), t: rnd(), s: .006 + rnd() * .012 }));
+  const pGeo = new T.BufferGeometry();
+  const pPos = new Float32Array(P * 3), pCol = new Float32Array(P * 3), pSize = new Float32Array(P).fill(15), pPh = new Float32Array(P).map(() => rnd() * 6.28);
+  pGeo.setAttribute("position", new T.BufferAttribute(pPos, 3));
+  pGeo.setAttribute("aColor", new T.BufferAttribute(pCol, 3));
+  pGeo.setAttribute("aSize", new T.BufferAttribute(pSize, 1));
+  pGeo.setAttribute("aPhase", new T.BufferAttribute(pPh, 1));
+  const pMat = pointMat(1); lattice.add(new T.Points(pGeo, pMat));
+
+  // ---- core: nested wireframe icosahedra + glow
+  const core = new T.Group(); root.add(core);
+  const c1Mat = new T.LineBasicMaterial({ transparent: true, opacity: .75 });
+  const c2Mat = new T.LineBasicMaterial({ transparent: true, opacity: .35 });
+  const c1 = new T.LineSegments(new T.EdgesGeometry(new T.IcosahedronGeometry(1.05, 0)), c1Mat);
+  const c2 = new T.LineSegments(new T.EdgesGeometry(new T.IcosahedronGeometry(1.45, 1)), c2Mat);
+  core.add(c1, c2);
+  const gGeo = new T.BufferGeometry();
+  gGeo.setAttribute("position", new T.BufferAttribute(new Float32Array([0,0,0]), 3));
+  gGeo.setAttribute("aColor", new T.BufferAttribute(new Float32Array(3), 3));
+  gGeo.setAttribute("aSize", new T.BufferAttribute(new Float32Array([150]), 1));
+  gGeo.setAttribute("aPhase", new T.BufferAttribute(new Float32Array([0]), 1));
+  const gMat = pointMat(.55); core.add(new T.Points(gGeo, gMat));
+
+  // ---- dashed orbits with satellites
+  const orbits = [];
+  [[4.3, .9, .3], [4.9, -.5, 1.1]].forEach(([rad, rx, rz]) => {
+    const g = new T.Group(); g.rotation.set(rx, 0, rz); root.add(g);
+    const pts = new T.EllipseCurve(0, 0, rad, rad, 0, Math.PI*2).getPoints(220).map(p => new T.Vector3(p.x, p.y, 0));
+    const mat = new T.LineDashedMaterial({ dashSize: .09, gapSize: .16, transparent: true, opacity: .35 });
+    const line = new T.LineLoop(new T.BufferGeometry().setFromPoints(pts), mat); line.computeLineDistances(); g.add(line);
+    const sat = new T.Mesh(new T.SphereGeometry(.07, 16, 16), new T.MeshBasicMaterial());
+    g.add(sat);
+    orbits.push({ g, sat, rad, mat, a: rnd() * 6.28, sp: .004 + rnd() * .003 });
+  });
+
+  // ---- colours per theme
+  function applyTheme(){
+    const dark = isDark();
+    const cP = new T.Color(css("--primary")), cA = new T.Color(css("--accent")), cAm = new T.Color(css("--amber"));
+    for (let i = 0; i < nodes.length; i++){
+      const m = (i * 0.618) % 1;
+      const c = m < .72 ? cP.clone().lerp(cA, m / .72 * .6) : cA.clone();
+      nCol.set([c.r, c.g, c.b], i*3);
+    }
+    nGeo.attributes.aColor.needsUpdate = true;
+    for (let i = 0; i < P; i++){ const c = i % 5 === 0 ? cAm : cA; pCol.set([c.r, c.g, c.b], i*3); }
+    pGeo.attributes.aColor.needsUpdate = true;
+    gGeo.attributes.aColor.array.set([cP.r, cP.g, cP.b]); gGeo.attributes.aColor.needsUpdate = true;
+    const blend = dark ? T.AdditiveBlending : T.NormalBlending;
+    [nMat, pMat, gMat].forEach(m => { m.blending = blend; m.needsUpdate = true; });
+    gMat.uniforms.uOpacity.value = dark ? .5 : .22;
+    eMat.color = cP.clone(); eMat.opacity = dark ? .22 : .28;
+    c1Mat.color = cA.clone(); c2Mat.color = cP.clone();
+    c2Mat.opacity = dark ? .35 : .45;
+    orbits.forEach((o, k) => { o.mat.color = k ? cA.clone() : cP.clone(); o.sat.material.color = k ? cAm.clone() : cA.clone(); });
+  }
+  applyTheme();
+  document.addEventListener("themechange", () => { applyTheme(); if (RM) render(); });
+
+  // ---- layout / resize
+  const hero = $(".hero");
+  function resize(){
+    const w = hero.clientWidth, h = hero.clientHeight;
+    renderer.setSize(w, h, false);
+    camera.aspect = w / h; camera.updateProjectionMatrix();
+    const wide = w > 960;
+    root.position.set(wide ? 3.6 : 0, wide ? 0 : 1.6, 0);
+    root.scale.setScalar(wide ? 1 : .78);
+    if (RM) render();
+  }
+  new ResizeObserver(resize).observe(hero); resize();
+
+  // ---- pointer parallax
+  const target = { x: 0, y: 0 }, cur = { x: 0, y: 0 };
+  addEventListener("pointermove", e => { target.x = (e.clientX / innerWidth - .5); target.y = (e.clientY / innerHeight - .5); }, { passive: true });
+
+  // ---- animate
+  let visible = true, t0 = performance.now();
+  new IntersectionObserver(([en]) => { visible = en.isIntersecting; }).observe(hero);
+  function step(time){
+    const t = (time - t0) / 1000;
+    [nMat, pMat, gMat].forEach(m => m.uniforms.uTime.value = t);
+    cur.x += (target.x - cur.x) * .04; cur.y += (target.y - cur.y) * .04;
+    lattice.rotation.y = t * .06 + cur.x * .6;
+    lattice.rotation.x = Math.sin(t * .15) * .12 + cur.y * .4;
+    c1.rotation.set(t * .3, t * .4, 0); c2.rotation.set(-t * .12, -t * .18, 0);
+    core.position.y = Math.sin(t * .8) * .06;
+    pulses.forEach((p, i) => {
+      p.t += p.s;
+      if (p.t >= 1){ p.t = 0; const [a, b] = edges[p.e]; const nxt = edges.map((e, k) => [e, k]).filter(([e]) => e[0] === b || e[1] === b); p.e = nxt.length ? nxt[Math.floor(rnd() * nxt.length)][1] : Math.floor(rnd() * edges.length); if (edges[p.e][1] === b) edges[p.e] = [edges[p.e][1], edges[p.e][0]]; }
+      const [a, b] = edges[p.e]; const A = nodes[a], B = nodes[b];
+      pPos[i*3] = A.x + (B.x - A.x) * p.t; pPos[i*3+1] = A.y + (B.y - A.y) * p.t; pPos[i*3+2] = A.z + (B.z - A.z) * p.t;
+    });
+    pGeo.attributes.position.needsUpdate = true;
+    orbits.forEach(o => { o.a += o.sp; o.sat.position.set(Math.cos(o.a) * o.rad, Math.sin(o.a) * o.rad, 0); });
+    root.rotation.y = cur.x * .15; root.rotation.x = cur.y * .1;
+  }
+  function render(){ renderer.render(scene, camera); }
+  if (RM){ step(t0 + 4000); render(); return; }
+  (function loop(time){ requestAnimationFrame(loop); if (!visible || document.hidden) return; step(time); render(); })(t0);
+})();
+
+/* =========================================================================
+   PROJECT CARDS
+   ========================================================================= */
+function projectCard(p, i){
+  const feature = i === 0;
+  const caps = p.capabilities.slice(0, 4).map(c => `<li>${ICON_CAP}<span>${esc(c)}</span></li>`).join("");
+  const shown = p.tech.slice(0, feature ? 12 : 7);
+  const extra = p.tech.length - shown.length;
+  const chips = shown.map(t => `<li class="chip">${esc(t)}</li>`).join("") + (extra > 0 ? `<li class="chip">+${extra} more</li>` : "");
+  const status = p.demo ? `<span class="badge-live">Live demo</span>` : `<span class="badge-soon">Demo coming soon</span>`;
+  const actions = p.demo
+    ? `<button class="btn btn-primary btn-sm" data-demo="${p.id}">Try Live Demo</button>`
+    : `<button class="btn btn-primary btn-sm" data-request="${p.id}">Request a Demo</button>`;
+  const top = `<div class="proj-top"><span class="tag">${esc(p.category)}</span><span class="proj-subtags">${p.tags.map(esc).join(", ")}</span>${status}</div>
+    <h3>${esc(p.name)}${p.subtitle ? `<span class="sr-only"> ${esc(p.subtitle)}</span>` : ""}</h3>`;
+  const ps = `<dl class="proj-ps"><div><dt>The business problem</dt><dd>${esc(p.problem)}</dd></div><div><dt>How the AI solves it</dt><dd>${esc(p.solution)}</dd></div></dl>`;
+  const rest = `<ul class="caps" aria-label="Key capabilities">${caps}</ul><ul class="chips" aria-label="Tech stack">${chips}</ul>`;
+  const impact = `<p class="impact"><strong>Business impact</strong>${esc(p.impact)}</p>`;
+  const act = `<div class="proj-actions">${actions}<button class="btn btn-ghost btn-sm" data-details="${p.id}" aria-label="Details and architecture for ${esc(p.name)}">Details</button>${ghBtn(p, "btn-sm")}</div>`;
+  return feature
+    ? `<article class="proj proj--feature" data-id="${p.id}" data-reveal>${top}<div class="proj-col">${ps}${impact}</div><div class="proj-col">${rest}${act}</div></article>`
+    : `<article class="proj" data-id="${p.id}" data-reveal>${top}${ps}${rest}${impact}${act}</article>`;
+}
+(function renderProjects(){
+  const grid = $("#proj-grid");
+  grid.innerHTML = PROJECTS.map(projectCard).join("");
+  const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting){ en.target.classList.add("is-in"); io.unobserve(en.target);} }), { threshold: .1 });
+  $$(".proj", grid).forEach(el => io.observe(el));
+
+  grid.addEventListener("click", e => {
+    const b = e.target.closest("button");
+    if (e.target.closest("a")) return;
+    if (b){
+      if (b.dataset.demo) openDemo(b.dataset.demo, b);
+      else if (b.dataset.request) requestDemo(b.dataset.request);
+      else if (b.dataset.details) openDetails(b.dataset.details, b);
+      return;
+    }
+    const card = e.target.closest(".proj");
+    if (card) openDetails(card.dataset.id, $("[data-details]", card));
+  });
+  grid.addEventListener("pointermove", e => {
+    const card = e.target.closest(".proj"); if (!card) return;
+    const r = card.getBoundingClientRect();
+    card.style.setProperty("--mx", (e.clientX - r.left) + "px"); card.style.setProperty("--my", (e.clientY - r.top) + "px");
+  });
+})();
+
+/* =========================================================================
+   DIALOG HELPERS (native <dialog>: focus containment + Esc built in)
+   ========================================================================= */
+let lastTrigger = null;
+function openDialog(dlg, trigger){
+  lastTrigger = trigger || document.activeElement;
+  $$("dialog[open]").forEach(d => d.close());
+  dlg.showModal();
+  document.documentElement.style.overflow = "hidden";
+  $("[data-close]", dlg).focus();
+  $(".modal-body", dlg).scrollTop = 0;
+}
+$$("dialog.modal").forEach(dlg => {
+  $("[data-close]", dlg).addEventListener("click", () => dlg.close());
+  dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+  dlg.addEventListener("close", () => {
+    if (!$("dialog[open]")) document.documentElement.style.overflow = "";
+    if (dlg.id === "demo-dialog") demoRun++;
+    if (lastTrigger && document.contains(lastTrigger) && !dlg.dataset.noReturn) lastTrigger.focus();
+    delete dlg.dataset.noReturn;
+  });
+});
+
+/* =========================================================================
+   PROJECT DETAILS MODAL (with layered architecture diagram)
+   ========================================================================= */
+function openDetails(id, trigger){
+  const p = PROJECTS.find(x => x.id === id); if (!p) return;
+  const dlg = $("#details-dialog");
+  $("#details-cat").textContent = p.category;
+  $("#details-title").textContent = p.name + (p.subtitle ? " " + p.subtitle : "");
+  const n = p.arch.length;
+  $("#details-body").innerHTML = `
+    <div class="modal-cols">
+      <div class="modal-block"><h3>The business problem</h3><p>${esc(p.problem)}</p></div>
+      <div class="modal-block"><h3>How the AI solves it</h3><p>${esc(p.solution)}</p></div>
+    </div>
+    <div class="modal-sep"></div>
+    <div class="modal-cols">
+      <div class="modal-block"><h3>Key capabilities</h3><ul class="caps">${p.capabilities.map(c => `<li>${ICON_CAP}<span>${esc(c)}</span></li>`).join("")}</ul></div>
+      <div class="modal-block"><h3>Tech stack</h3><ul class="chips">${p.tech.map(t => `<li class="chip">${esc(t)}</li>`).join("")}</ul>
+        <p class="impact" style="margin-top:20px"><strong>Business impact</strong>${esc(p.impact)}</p></div>
+    </div>
+    <div class="modal-sep"></div>
+    <div class="modal-block">
+      <h3>Architecture</h3>
+      <p style="margin-bottom:16px">How the system is layered, from what users touch down to the data it runs on.</p>
+      <div class="arch" role="list">
+        ${p.arch.map((l, i) => `<div class="arch-layer" role="listitem" style="--depth:${Math.round(22 - i * (16 / n))}"><div class="arch-name">${esc(l.layer)}</div><div class="arch-items">${l.items.map(it => `<span>${esc(it)}</span>`).join("")}</div></div>`).join("")}
+      </div>
+    </div>
+    <div class="proj-actions" style="margin-top:28px">
+      ${p.demo ? `<button class="btn btn-primary" data-demo="${p.id}">Try Live Demo</button>${ghBtn(p, "")}<span class="demo-note">Demos run on synthetic data.</span>` : `<span class="badge-soon" style="margin:0">Demo coming soon</span><button class="btn btn-primary" data-request="${p.id}">Request a Demo</button>${ghBtn(p, "")}`}
+    </div>`;
+  const b = $("#details-body");
+  b.onclick = e => { const btn = e.target.closest("button"); if (!btn) return; if (btn.dataset.demo) openDemo(btn.dataset.demo, trigger); if (btn.dataset.request) requestDemo(btn.dataset.request); };
+  openDialog(dlg, trigger);
+}
+
+/* =========================================================================
+   REQUEST A DEMO -> preselect project in contact form
+   ========================================================================= */
+function requestDemo(id){
+  const p = PROJECTS.find(x => x.id === id);
+  $$("dialog[open]").forEach(d => { d.dataset.noReturn = "1"; d.close(); });
+  const sel = $("#f-interest"); sel.value = p.name;
+  const msg = $("#f-message");
+  if (!msg.value.trim()) msg.value = `I'd like to see a demo of the ${p.name} and discuss how it could work with our data.`;
+  $("#contact").scrollIntoView({ behavior: RM ? "auto" : "smooth" });
+  setTimeout(() => $("#f-name").focus({ preventScroll: true }), RM ? 0 : 700);
+}
+
+/* =========================================================================
+   DEMOS
+   ========================================================================= */
+let demoRun = 0;
+function openDemo(id, trigger){
+  const p = PROJECTS.find(x => x.id === id); if (!p || !p.demo) return;
+  $("#demo-title").textContent = "Live demo: " + p.name;
+  const body = $("#demo-body");
+  demoRun++;
+  ({ rag: renderRagDemo, sql: renderSqlDemo, forecast: renderForecastDemo, flash: renderFlashDemo, invoice: renderInvoiceDemo })[p.demo](body);
+  openDialog($("#demo-dialog"), trigger);
+}
+
+// Shared pipeline helpers
+function pipelineHTML(steps){ return `<ol class="pipeline">${steps.map(s => `<li class="pl-step"><span class="pl-dot">${ICON_CHECK}</span><span class="pl-title">${esc(s)}</span><div class="pl-detail"></div></li>`).join("")}</ol>`; }
+function setStep(root, i, state, html){
+  const li = $$(".pl-step", root)[i]; if (!li) return;
+  li.classList.remove("running", "done"); if (state) li.classList.add(state);
+  if (html !== undefined) $(".pl-detail", li).innerHTML = html;
+}
+function questionsHTML(qs){ return `<p class="demo-q-label" id="q-label">Pick a sample question</p><div class="q-list" role="group" aria-labelledby="q-label">${qs.map((q, i) => `<button class="q-btn" type="button" data-q="${i}" aria-pressed="false">${esc(q.q)}</button>`).join("")}</div>`; }
+async function typeInto(el, text, run, speed = 14){
+  el.textContent = "";
+  const chunk = RM ? text.length : 3;
+  for (let i = 0; i < text.length; i += chunk){ if (run !== demoRun) return false; el.textContent = text.slice(0, i + chunk); await wait(speed); }
+  return true;
+}
+
+/* ---------- Demo 1: RAG knowledge assistant ---------- */
+const RAG_QA = [
+  { q: "How many days of paid annual leave do I get, and can I carry unused days forward?",
+    rewrite: "annual leave entitlement full-time employees; carry-forward rules for unused leave",
+    access: "HR policies, General handbook",
+    cands: [["Leave Policy v4.2", "§2.1 Annual entitlement", .82, .91], ["Leave Policy v4.2", "§2.4 Carry-forward", .77, .88], ["Employee Handbook 2026", "§5 Time off", .61, .74], ["Remote Work Policy", "§3 Availability", .34, .52], ["Leave Policy v4.2", "§4 Notice periods", .48, .69]],
+    rerank: [[1, .94], [0, .92], [4, .71]],
+    answer: "Full-time employees receive 24 days of paid annual leave per calendar year, accrued at 2 days per month [1]. You can carry up to 8 unused days into the next year, but they must be used by 31 March or they lapse unless your manager approves an exception in writing [2]. Requests for more than 5 consecutive days need at least 2 weeks' notice [3].",
+    sources: [["Leave Policy v4.2", "§2.1 Annual entitlement", "24 days per year, accrued monthly."], ["Leave Policy v4.2", "§2.4 Carry-forward", "Max 8 days, use by 31 March."], ["Leave Policy v4.2", "§4 Notice periods", "2 weeks' notice for 5+ days."]] },
+  { q: "What's the daily meal allowance on a domestic business trip, and what receipts do I need?",
+    rewrite: "per diem meal allowance domestic travel; receipt requirements for expense claims",
+    access: "Finance policies, General handbook",
+    cands: [["Travel & Expense Guidelines 2026", "§3.2 Per diems", .85, .9], ["Travel & Expense Guidelines 2026", "§6 Receipts", .71, .83], ["Procurement Handbook", "§1 Spend approvals", .39, .47], ["Travel & Expense Guidelines 2026", "§3.5 International travel", .66, .72], ["Employee Handbook 2026", "§8 Reimbursements", .52, .68]],
+    rerank: [[0, .96], [1, .9], [4, .63]],
+    answer: "On domestic trips you can claim up to ₹2,500 per day for meals, or ₹1,200 for a partial day under 8 hours [1]. Itemised receipts are required for any single expense above ₹500, and claims must be filed in the expense tool within 30 days of returning [2]. Alcohol is not reimbursable [3].",
+    sources: [["Travel & Expense Guidelines 2026", "§3.2 Per diems", "Daily and partial-day limits."], ["Travel & Expense Guidelines 2026", "§6 Receipts", "Itemised receipts above ₹500."], ["Employee Handbook 2026", "§8 Reimbursements", "Non-reimbursable items."]] },
+  { q: "Can I use a personal USB drive on my work laptop?",
+    rewrite: "removable media personal USB storage policy on company-issued devices",
+    access: "IT & security policies (public tier)",
+    cands: [["Information Security Standard", "§7 Removable media", .88, .93], ["Information Security Standard", "§4 Data classification", .55, .71], ["Acceptable Use Policy", "§2 Personal devices", .7, .8], ["Remote Work Policy", "§5 Equipment", .45, .58], ["Employee Handbook 2026", "§11 IT support", .31, .49]],
+    rerank: [[0, .97], [2, .88], [1, .66]],
+    answer: "No. Personal USB drives and other removable storage are blocked on company laptops, and attempting to use them is logged [1]. To move files, use the approved cloud storage or request an encrypted company drive through the IT service desk [1]. Personal devices may not store any data classified as Internal or higher [2].",
+    sources: [["Information Security Standard", "§7 Removable media", "Blocked by default; approved alternatives."], ["Acceptable Use Policy", "§2 Personal devices", "No Internal data on personal devices."]] },
+  { q: "Do I need approval to buy a software subscription for my team?",
+    rewrite: "approval workflow software purchase SaaS subscription spend threshold",
+    access: "Operations policies, Finance policies",
+    cands: [["Procurement Handbook", "§3 Software & SaaS", .86, .9], ["Procurement Handbook", "§1 Spend approvals", .74, .84], ["Information Security Standard", "§9 Third-party vendors", .58, .77], ["Travel & Expense Guidelines 2026", "§9 Corporate cards", .5, .56], ["Employee Handbook 2026", "§8 Reimbursements", .33, .44]],
+    rerank: [[0, .95], [1, .9], [2, .84]],
+    answer: "Yes. All software subscriptions need a purchase request, even if the cost is small, because every tool must pass a security review first [1][3]. Your manager can approve up to ₹50,000 a year; anything above that also needs Finance sign-off [2]. Corporate cards should not be used to start new subscriptions [1].",
+    sources: [["Procurement Handbook", "§3 Software & SaaS", "Purchase request always required."], ["Procurement Handbook", "§1 Spend approvals", "Approval thresholds by amount."], ["Information Security Standard", "§9 Third-party vendors", "Security review before use."]] }
+];
+function renderRagDemo(body){
+  body.innerHTML = `<div class="demo-grid"><div>${questionsHTML(RAG_QA)}</div><div id="rag-out"><div class="demo-empty">Choose a question to watch the assistant check access, search your documents, rerank the results and write a cited answer.</div></div></div>`;
+  const qBtns = $$(".q-btn", body);
+  qBtns.forEach(b => b.addEventListener("click", () => runRag(+b.dataset.q, body, qBtns)));
+}
+async function runRag(qi, body, qBtns){
+  const run = ++demoRun; const d = RAG_QA[qi];
+  qBtns.forEach(b => b.setAttribute("aria-pressed", String(+b.dataset.q === qi)));
+  const out = $("#rag-out", body);
+  out.innerHTML = pipelineHTML(["Check access and rewrite the question", "Hybrid retrieval (keyword + semantic)", "Rerank with a cross-encoder", "Write a grounded, cited answer"]) + `<div id="rag-answer" aria-live="polite"></div>`;
+  const ok = () => run === demoRun;
+  setStep(out, 0, "running"); await wait(800); if (!ok()) return;
+  setStep(out, 0, "done", `Allowed collections: ${esc(d.access)}<br>Search query: <span class="mono">${esc(d.rewrite)}</span>`);
+  setStep(out, 1, "running"); await wait(600); if (!ok()) return;
+  setStep(out, 1, "running", `<div class="bar-legend"><span>BM25</span><span class="v">Vector</span></div>` + d.cands.map(c => `<div class="score-row"><span class="doc">${esc(c[0])}, ${esc(c[1])}</span><span class="bars"><span class="bar"><i data-w="${c[2]}"></i></span><span class="bar v"><i data-w="${c[3]}"></i></span></span></div>`).join(""));
+  await wait(40); $$(".bar i", out).forEach(i => i.style.width = (+i.dataset.w * 100) + "%");
+  await wait(1200); if (!ok()) return;
+  setStep(out, 1, "done");
+  setStep(out, 2, "running"); await wait(900); if (!ok()) return;
+  const keep = new Set(d.rerank.map(r => r[0]));
+  $$(".score-row", out).forEach((row, i) => { if (!keep.has(i)) row.classList.add("dropped"); });
+  setStep(out, 2, "done", d.rerank.map((r, k) => `<div class="score-row"><span class="doc">[${k+1}] ${esc(d.cands[r[0]][0])}, ${esc(d.cands[r[0]][1])}</span><span class="bars"><span class="bar"><i style="width:${r[1]*100}%"></i></span></span></div>`).join("") + `<p style="margin-top:6px">Kept the top ${d.rerank.length} of ${d.cands.length} passages.</p>`);
+  setStep(out, 3, "running"); await wait(500); if (!ok()) return;
+  const ans = $("#rag-answer", out);
+  ans.innerHTML = `<div class="answer"><h4>Answer</h4><p id="rag-text"></p></div>`;
+  const words = d.answer.split(" "); const pEl = $("#rag-text", ans);
+  const fmt = s => esc(s).replace(/\[(\d)\]/g, '<span class="cite" aria-label="source $1">$1</span>');
+  for (let i = 1; i <= words.length; i += RM ? words.length : 2){ if (!ok()) return; pEl.innerHTML = fmt(words.slice(0, i).join(" ")); await wait(38); }
+  pEl.innerHTML = fmt(d.answer);
+  setStep(out, 3, "done", "Every sentence is grounded in a retrieved passage.");
+  $(".answer", ans).insertAdjacentHTML("beforeend", `<div class="sources">${d.sources.map((s, i) => `<div class="source"><b><span class="cite">${i+1}</span>${esc(s[0])}</b><span>${esc(s[1])}: ${esc(s[2])}</span></div>`).join("")}</div>
+    <div class="eval-row"><span class="eval-chip">faithfulness 0.96</span><span class="eval-chip">context precision 0.91</span><span class="eval-chip">trace logged</span></div>`);
+}
+
+/* ---------- Demo 2: Natural language to SQL ---------- */
+const SQL_QA = [
+  { q: "Which warehouses had the highest stockouts last quarter?",
+    tables: [["gold.inventory_stockouts", .94], ["gold.dim_warehouse", .89], ["gold.dim_date", .61]],
+    plan: ["Filter stockout events to last quarter (Apr 1 to Jun 30, 2026)", "Join to warehouse names and regions", "Count events and sum lost units per warehouse", "Return the top 5 by stockout count"],
+    sql: `SELECT w.warehouse_name,
+       w.region,
+       COUNT(*)            AS stockout_events,
+       SUM(s.lost_units)   AS lost_units
+FROM gold.inventory_stockouts s
+JOIN gold.dim_warehouse w
+  ON s.warehouse_id = w.warehouse_id
+WHERE s.event_date >= DATE '2026-04-01'
+  AND s.event_date <  DATE '2026-07-01'
+GROUP BY w.warehouse_name, w.region
+ORDER BY stockout_events DESC
+LIMIT 5;`,
+    cols: ["Warehouse", "Region", "Stockout events", "Lost units"],
+    rows: [["Pune DC-2", "West", 142, 18420], ["Chennai Hub", "South", 118, 15210], ["Kolkata DC-1", "East", 97, 11980], ["Hyderabad DC", "South", 84, 9760], ["Delhi North", "North", 71, 8330]],
+    chart: { type: "bar", labelCol: 0, valCol: 2, title: "Stockout events by warehouse" }, ms: 842 },
+  { q: "What were our top 5 SKUs by units sold in the South region this year?",
+    tables: [["gold.fact_sales", .95], ["gold.dim_product", .9], ["gold.dim_store", .78]],
+    plan: ["Filter sales to 2026 and the South region", "Join product names and categories", "Sum units and revenue per SKU", "Return the top 5 by units"],
+    sql: `SELECT p.sku,
+       p.product_name,
+       SUM(f.units)        AS units_sold,
+       SUM(f.net_revenue)  AS net_revenue
+FROM gold.fact_sales f
+JOIN gold.dim_product p ON f.product_id = p.product_id
+JOIN gold.dim_store   s ON f.store_id   = s.store_id
+WHERE s.region = 'South'
+  AND f.sale_date >= DATE '2026-01-01'
+GROUP BY p.sku, p.product_name
+ORDER BY units_sold DESC
+LIMIT 5;`,
+    cols: ["SKU", "Product", "Units sold", "Net revenue (₹)"],
+    rows: [["SKU-10482", "Steel water bottle 1L", 48210, "1,44,63,000"], ["SKU-22017", "Cotton bath towel set", 39875, "2,39,25,000"], ["SKU-11390", "Non-stick fry pan 26cm", 33102, "2,64,81,600"], ["SKU-30551", "LED desk lamp", 28744, "2,58,69,600"], ["SKU-10477", "Lunch box 3-tier", 26519, "1,32,59,500"]],
+    chart: { type: "bar", labelCol: 1, valCol: 2, title: "Units sold by SKU" }, ms: 1107 },
+  { q: "How has our on-time delivery rate changed month by month in 2026?",
+    tables: [["gold.fact_shipments", .96], ["gold.dim_date", .74], ["gold.dim_carrier", .52]],
+    plan: ["Filter shipments delivered in 2026", "Mark each as on time if delivered by the promised date", "Group by month and compute the on-time share", "Order by month"],
+    sql: `SELECT DATE_TRUNC('month', delivered_at) AS month,
+       ROUND(100.0 * AVG(CASE WHEN delivered_at <= promised_at
+                              THEN 1 ELSE 0 END), 1) AS on_time_pct,
+       COUNT(*) AS shipments
+FROM gold.fact_shipments
+WHERE delivered_at >= DATE '2026-01-01'
+GROUP BY 1
+ORDER BY 1;`,
+    cols: ["Month", "On-time %", "Shipments"],
+    rows: [["Jan", 91.2, 20410], ["Feb", 90.4, 19870], ["Mar", 88.9, 22340], ["Apr", 86.1, 23910], ["May", 87.8, 24560], ["Jun", 89.6, 23120], ["Jul", 92.3, 22780], ["Aug", 93.1, 23460], ["Sep", 93.8, 21990]],
+    chart: { type: "line", labelCol: 0, valCol: 1, title: "On-time delivery rate, 2026 (%)" }, ms: 693 }
+];
+function hlSQL(s){
+  return esc(s).replace(/('[^']*')|\b(SELECT|FROM|JOIN|ON|WHERE|AND|GROUP BY|ORDER BY|LIMIT|AS|DESC|SUM|COUNT|AVG|ROUND|CASE|WHEN|THEN|ELSE|END|DATE_TRUNC|DATE)\b|\b(\d+(?:\.\d+)?)\b/g,
+    (m, str, kw, num) => str ? `<span class="s">${str}</span>` : kw ? `<span class="k">${kw}</span>` : `<span class="n">${num}</span>`);
+}
+function renderSqlDemo(body){
+  body.innerHTML = `<div class="demo-grid"><div>${questionsHTML(SQL_QA)}</div><div id="sql-out"><div class="demo-empty">Choose a question to watch the agents find the right tables, write SQL, check it for safety and return the answer.</div></div></div><div id="sql-results" aria-live="polite"></div>`;
+  const qBtns = $$(".q-btn", body);
+  qBtns.forEach(b => b.addEventListener("click", () => runSql(+b.dataset.q, body, qBtns)));
+}
+async function runSql(qi, body, qBtns){
+  const run = ++demoRun; const d = SQL_QA[qi]; const ok = () => run === demoRun;
+  qBtns.forEach(b => b.setAttribute("aria-pressed", String(+b.dataset.q === qi)));
+  const out = $("#sql-out", body); const res = $("#sql-results", body); res.innerHTML = "";
+  out.innerHTML = pipelineHTML(["Find the relevant tables", "Plan the query", "Generate SQL", "Validate for safety", "Run on the read-only warehouse"]);
+  setStep(out, 0, "running"); await wait(800); if (!ok()) return;
+  setStep(out, 0, "done", `<ul class="chips" style="margin-top:4px">${d.tables.map(t => `<li class="chip">${esc(t[0])} ${t[1].toFixed(2)}</li>`).join("")}</ul>`);
+  setStep(out, 1, "running"); await wait(800); if (!ok()) return;
+  setStep(out, 1, "done", d.plan.map((p, i) => `${i+1}. ${esc(p)}`).join("<br>"));
+  setStep(out, 2, "running", `<pre class="code" id="sql-code" aria-label="Generated SQL"></pre>`); await wait(200);
+  const code = $("#sql-code", out);
+  if (!(await typeInto(code, d.sql, run, 12))) return;
+  code.innerHTML = hlSQL(d.sql);
+  setStep(out, 2, "done");
+  const checks = ["Read-only statement (SELECT only)", "All tables on the governed allow-list", "Row limit or aggregation applied", "No restricted or personal columns", "Dry-run EXPLAIN passed"];
+  setStep(out, 3, "running", `<ul class="checks">${checks.map(c => `<li>${ICON_CHECK}<span>${c}</span></li>`).join("")}</ul>`);
+  for (const li of $$(".checks li", out)){ await wait(300); if (!ok()) return; li.classList.add("ok"); }
+  setStep(out, 3, "done"); $(".pl-step:nth-child(4) .pl-detail", out).insertAdjacentHTML("beforeend", `<span class="validated">${ICON_CHECK}Validated</span>`);
+  setStep(out, 4, "running"); await wait(900); if (!ok()) return;
+  setStep(out, 4, "done", `<span class="run-meta">${d.rows.length} rows in ${(d.ms/1000).toFixed(2)} s</span>`);
+  const table = `<div class="table-wrap"><table class="res"><caption class="sr-only">Query results</caption><thead><tr>${d.cols.map((c, i) => `<th scope="col" class="${typeof d.rows[0][i] === "number" ? "num" : ""}">${esc(c)}</th>`).join("")}</tr></thead><tbody>${d.rows.map(r => `<tr>${r.map(v => `<td class="${typeof v === "number" ? "num" : ""}">${typeof v === "number" ? v.toLocaleString("en-IN") : esc(v)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+  const labels = d.rows.map(r => r[d.chart.labelCol]), vals = d.rows.map(r => r[d.chart.valCol]);
+  const chart = d.chart.type === "bar" ? barChart(labels, vals) : lineChart(labels, vals);
+  res.innerHTML = `<div class="modal-sep"></div><h3 style="font-size:1rem">Results</h3><div class="results-grid"><div>${table}</div><div class="chart-box" role="img" aria-label="${esc(d.chart.title)}"><p style="font-size:.85rem;font-weight:600;margin-bottom:8px">${esc(d.chart.title)}</p>${chart}</div></div>`;
+  res.scrollIntoView({ behavior: RM ? "auto" : "smooth", block: "nearest" });
+}
+function barChart(labels, vals){
+  const W = 420, rowH = 34, H = labels.length * rowH + 8, L = 120, max = Math.max(...vals);
+  return `<svg viewBox="0 0 ${W} ${H}" aria-hidden="true">${labels.map((l, i) => {
+    const w = (vals[i] / max) * (W - L - 60), y = i * rowH + 6;
+    const lab = String(l).length > 17 ? String(l).slice(0, 16) + "…" : l;
+    return `<text x="0" y="${y + 17}">${esc(lab)}</text><rect x="${L}" y="${y + 4}" height="18" rx="4" width="0" fill="var(--primary)" opacity="${1 - i * .12}"><animate attributeName="width" from="0" to="${w}" dur="${RM ? "0.01s" : "0.7s"}" fill="freeze" begin="${i * .08}s"/></rect><text x="${L + w + 8}" y="${y + 17}" style="fill:var(--text);font-weight:600">${vals[i].toLocaleString("en-IN")}</text>`;
+  }).join("")}</svg>`;
+}
+function lineChart(labels, vals){
+  const W = 420, H = 220, pl = 34, pr = 12, pt = 12, pb = 26;
+  const min = Math.floor(Math.min(...vals) - 2), max = Math.ceil(Math.max(...vals) + 1);
+  const x = i => pl + i * (W - pl - pr) / (labels.length - 1), y = v => pt + (1 - (v - min) / (max - min)) * (H - pt - pb);
+  const d = vals.map((v, i) => `${i ? "L" : "M"}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join("");
+  const grid = [0, .5, 1].map(f => { const v = min + f * (max - min); return `<line x1="${pl}" x2="${W - pr}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)"/><text x="0" y="${y(v) + 4}">${v.toFixed(0)}</text>`; }).join("");
+  return `<svg viewBox="0 0 ${W} ${H}" aria-hidden="true">${grid}<path d="${d} L${x(vals.length - 1)},${H - pb} L${pl},${H - pb}Z" fill="var(--accent)" opacity=".1"/><path d="${d}" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linejoin="round"/>${vals.map((v, i) => `<circle cx="${x(i)}" cy="${y(v)}" r="3.5" fill="var(--surface)" stroke="var(--accent)" stroke-width="2"/><text x="${x(i)}" y="${H - 6}" text-anchor="middle">${esc(labels[i])}</text>`).join("")}</svg>`;
+}
+
+/* ---------- Demo 3: Forecast simulator ---------- */
+const FC = (function buildData(){
+  // Synthetic monthly demand: Oct 2024 to Sep 2026 (24 months)
+  let s = 42; const r = () => (s = (s * 16807) % 2147483647) / 2147483647;
+  const start = 9; // October (0-based)
+  const hist = [];
+  for (let t = 0; t < 24; t++){
+    const m = (start + t) % 12;
+    const season = 1 + .17 * Math.cos(2 * Math.PI * (m - 11) / 12) + (m === 5 ? .05 : 0);
+    hist.push(Math.round(12000 * Math.pow(1.011, t) * season * (1 + (r() - .5) * .08)));
+  }
+  const mon = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  const labels = Array.from({ length: 36 }, (_, t) => { const m = (start + t) % 12, yr = 24 + Math.floor((start + t) / 12); return `${mon[m]} ${yr}`; });
+  function fit(y){
+    const n = y.length, lin = arr => { let sx = 0, sy = 0, sxy = 0, sxx = 0; arr.forEach((v, t) => { sx += t; sy += v; sxy += t * v; sxx += t * t; }); const b = (n * sxy - sx * sy) / (n * sxx - sx * sx); return [(sy - b * sx) / n, b]; };
+    let [a, b] = lin(y);
+    const idx = Array(12).fill(0), cnt = Array(12).fill(0);
+    y.forEach((v, t) => { const m = (start + t) % 12; idx[m] += v / (a + b * t); cnt[m]++; });
+    for (let m = 0; m < 12; m++) idx[m] = cnt[m] ? idx[m] / cnt[m] : 1;
+    const mean = idx.reduce((p, c) => p + c, 0) / 12; for (let m = 0; m < 12; m++) idx[m] /= mean;
+    [a, b] = lin(y.map((v, t) => v / idx[(start + t) % 12]));
+    const pred = t => (a + b * t) * idx[(start + t) % 12];
+    const resid = y.map((v, t) => (v - pred(t)) / v); const sd = Math.sqrt(resid.reduce((p, c) => p + c * c, 0) / n);
+    return { pred, sd };
+  }
+  // holdout: train on first 18, test on last 6
+  const hm = fit(hist.slice(0, 18));
+  let mape = 0; for (let t = 18; t < 24; t++) mape += Math.abs(hist[t] - hm.pred(t)) / hist[t]; mape = mape / 6 * 100;
+  const model = fit(hist);
+  const base = Array.from({ length: 12 }, (_, k) => model.pred(24 + k));
+  return { hist, labels, base, sd: model.sd, mape, start };
+})();
+function renderForecastDemo(body){
+  body.innerHTML = `
+  <div class="fc-grid">
+    <div>
+      <div id="fc-steps">${pipelineHTML(["Load 24 months of demand history", "Fit baseline (trend + seasonality)", "Check accuracy on a 6-month holdout"])}</div>
+      <div id="fc-controls" hidden>
+        <div class="slider"><label for="s-price">Price change <output id="o-price" for="s-price">0%</output></label><input type="range" id="s-price" min="-20" max="20" step="1" value="0"><small>Assumes typical price sensitivity: a 1% price cut lifts units about 1.3%.</small></div>
+        <div class="slider"><label for="s-promo">Promotion uplift <output id="o-promo" for="s-promo">0%</output></label><input type="range" id="s-promo" min="0" max="30" step="1" value="0"><small>Applied in the Nov, Dec, Mar and Jun promo windows.</small></div>
+        <div class="slider"><label for="s-market">Market growth, per year <output id="o-market" for="s-market">0%</output></label><input type="range" id="s-market" min="-10" max="20" step="1" value="0"><small>Compounds month by month across the forecast.</small></div>
+        <button class="btn btn-ghost btn-sm" type="button" id="fc-reset">Reset to baseline</button>
+      </div>
+    </div>
+    <div>
+      <div class="chart-box" style="margin-top:0" role="img" aria-label="Monthly demand: history, baseline forecast and scenario forecast"><div id="fc-chart"><div class="demo-empty" style="border:0">Fitting the baseline model…</div></div></div>
+      <div class="fc-legend"><span><i style="background:var(--text)"></i>History</span><span><i style="background:var(--primary);opacity:.8"></i>Baseline forecast</span><span><i style="background:var(--accent)"></i>Your scenario</span><span><i style="background:var(--primary);opacity:.2;height:10px"></i>Baseline range</span></div>
+      <div id="fc-stats"></div>
+    </div>
+  </div>`;
+  runForecastIntro(body);
+}
+async function runForecastIntro(body){
+  const run = ++demoRun, ok = () => run === demoRun, st = $("#fc-steps", body);
+  setStep(st, 0, "running"); await wait(700); if (!ok()) return;
+  setStep(st, 0, "done", `Oct 2024 to Sep 2026, ${FC.hist.reduce((a, b) => a + b, 0).toLocaleString("en-IN")} units total.`);
+  drawForecast(body, null);
+  setStep(st, 1, "running"); await wait(900); if (!ok()) return;
+  setStep(st, 1, "done", "Linear trend with a monthly seasonal index.");
+  setStep(st, 2, "running"); await wait(800); if (!ok()) return;
+  setStep(st, 2, "done", `Holdout error (MAPE): <b style="color:var(--text)">${FC.mape.toFixed(1)}%</b> on the last 6 months.`);
+  const ctr = $("#fc-controls", body); ctr.hidden = false;
+  const inputs = ["price", "promo", "market"].map(k => $("#s-" + k, body));
+  const update = () => {
+    const [p, u, g] = inputs.map(i => +i.value);
+    $("#o-price", body).textContent = (p > 0 ? "+" : "") + p + "%";
+    $("#o-promo", body).textContent = "+" + u + "%";
+    $("#o-market", body).textContent = (g > 0 ? "+" : "") + g + "%";
+    drawForecast(body, { p, u, g });
+  };
+  inputs.forEach(i => i.addEventListener("input", update));
+  $("#fc-reset", body).addEventListener("click", () => { inputs.forEach(i => i.value = 0); update(); });
+  // start from an illustrative scenario so the comparison is visible immediately
+  inputs[0].value = -5; inputs[1].value = 10; inputs[2].value = 4; update();
+}
+function scenarioSeries(s){
+  const promoMonths = new Set([10, 11, 2, 5]);
+  const priceF = Math.max(.2, 1 - 1.3 * s.p / 100);
+  return FC.base.map((b, k) => {
+    const m = (FC.start + 24 + k) % 12;
+    return b * priceF * (promoMonths.has(m) ? 1 + s.u / 100 : 1) * Math.pow(1 + s.g / 100, (k + 1) / 12);
+  });
+}
+function drawForecast(body, s){
+  const W = 720, H = 320, pl = 46, pr = 14, pt = 14, pb = 30;
+  const all = FC.hist.concat(FC.base);
+  const band = FC.base.map((b, k) => [b * (1 - 1.28 * FC.sd * Math.sqrt(1 + k / 4)), b * (1 + 1.28 * FC.sd * Math.sqrt(1 + k / 4))]);
+  const scen = s ? scenarioSeries(s) : null;
+  const vals = all.concat(band.flat(), scen || []);
+  const lo = Math.floor(Math.min(...vals) * .9 / 1000) * 1000, hi = Math.ceil(Math.max(...vals) * 1.04 / 1000) * 1000;
+  const x = t => pl + t * (W - pl - pr) / 35, y = v => pt + (1 - (v - lo) / (hi - lo)) * (H - pt - pb);
+  const path = (arr, off) => arr.map((v, i) => `${i ? "L" : "M"}${x(i + off).toFixed(1)},${y(v).toFixed(1)}`).join("");
+  const grid = Array.from({ length: 5 }, (_, i) => { const v = lo + i * (hi - lo) / 4; return `<line x1="${pl}" x2="${W - pr}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)"/><text x="${pl - 8}" y="${y(v) + 4}" text-anchor="end">${(v / 1000).toFixed(0)}k</text>`; }).join("");
+  const xl = FC.labels.map((l, t) => t % 4 === 0 ? `<text x="${x(t)}" y="${H - 8}" text-anchor="middle">${l}</text>` : "").join("");
+  const bandPath = band.map((b, k) => `${k ? "L" : "M"}${x(24 + k)},${y(b[1])}`).join("") + band.slice().reverse().map((b, k) => `L${x(35 - k)},${y(b[0])}`).join("") + "Z";
+  const lastH = FC.hist[23];
+  $("#fc-chart", body).innerHTML = `<svg viewBox="0 0 ${W} ${H}" aria-hidden="true">
+    <rect x="${x(23.5)}" y="${pt}" width="${x(35) - x(23.5)}" height="${H - pt - pb}" fill="var(--glow)" opacity=".6"/>
+    <text x="${x(24)}" y="${pt + 14}" style="fill:var(--primary);font-weight:600">Forecast</text>
+    ${grid}${xl}
+    <path d="${bandPath}" fill="var(--primary)" opacity=".12"/>
+    <path d="${path(FC.hist, 0)}" fill="none" stroke="var(--text)" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M${x(23)},${y(lastH)}L${x(24)},${y(FC.base[0])}${path(FC.base, 24).replace(/^M/, "L")}" fill="none" stroke="var(--primary)" stroke-width="2" stroke-dasharray="6 5" opacity=".9"/>
+    ${scen ? `<path d="M${x(23)},${y(lastH)}L${x(24)},${y(scen[0])}${path(scen, 24).replace(/^M/, "L")}" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linejoin="round"/>` : ""}
+  </svg>`;
+  const stats = $("#fc-stats", body);
+  if (!scen){ stats.innerHTML = ""; return; }
+  const bT = FC.base.reduce((a, b) => a + b, 0), sT = scen.reduce((a, b) => a + b, 0);
+  const dU = (sT / bT - 1) * 100, dR = (sT * (1 + s.p / 100) / bT - 1) * 100;
+  const f = v => (v >= 0 ? "+" : "−") + Math.abs(v).toFixed(1) + "%";
+  const cls = v => Math.abs(v) < .05 ? "" : v > 0 ? "up" : "down";
+  // individual drivers for the plain-English explanation
+  const only = o => (scenarioSeries(Object.assign({ p: 0, u: 0, g: 0 }, o)).reduce((a, b) => a + b, 0) / bT - 1) * 100;
+  const drivers = [["the price change", only({ p: s.p })], ["the promotions", only({ u: s.u })], ["market growth", only({ g: s.g })]].sort((a, b) => Math.abs(b[1]) - Math.abs(a[1]));
+  let text;
+  if (Math.abs(dU) < .05 && Math.abs(dR) < .05) text = "This scenario matches the baseline. Move a slider to see how demand and revenue respond.";
+  else {
+    text = `Over the next 12 months this scenario ${dU >= 0 ? "raises" : "lowers"} forecast demand by about ${Math.abs(dU).toFixed(1)}% versus the baseline (${Math.round(sT).toLocaleString("en-IN")} vs ${Math.round(bT).toLocaleString("en-IN")} units). `;
+    if (s.p < 0 && dR < dU) text += `Revenue grows less, about ${f(dR)}, because each unit sells for ${Math.abs(s.p)}% less. `;
+    else if (s.p > 0) text += `Revenue changes by about ${f(dR)}, as the higher price ${dR > 0 ? "more than offsets" : "doesn't fully offset"} the lower volume. `;
+    else text += `Revenue moves in line, about ${f(dR)}. `;
+    if (Math.abs(drivers[0][1]) >= .05) text += `The biggest driver is ${drivers[0][0]}.`;
+  }
+  stats.innerHTML = `<div class="fc-stats">
+    <div class="fc-stat"><small>Demand vs baseline</small><b class="${cls(dU)}">${f(dU)}</b></div>
+    <div class="fc-stat"><small>Revenue vs baseline</small><b class="${cls(dR)}">${f(dR)}</b></div>
+    <div class="fc-stat"><small>Baseline holdout error</small><b>${FC.mape.toFixed(1)}%</b></div>
+  </div><p class="fc-summary" aria-live="polite">${esc(text)}</p>`;
+}
+
+/* ---------- Demo 4: Predictive inventory & flash-sale coordinator ---------- */
+const FLASH_SKUS = [
+  { sku: "SKU-40211", name: "Linen throw, charcoal", wh: "Pune DC-2", units: 1840, cover: 212, st: 9, cost: 640, price: 1499, spark: [42,38,35,30,27,22,18,15], note: "Steady decline for 8 weeks", keep: true },
+  { sku: "SKU-51807", name: "Ceramic planter set, sage", wh: "Chennai Hub", units: 1320, cover: 186, st: 11, cost: 520, price: 1199, spark: [30,31,27,24,22,20,19,17], note: "Demand fading since spring", keep: true },
+  { sku: "SKU-33960", name: "Wool blend scarf, rust", wh: "Delhi North", units: 2250, cover: 240, st: 7, cost: 380, price: 899, spark: [12,10,8,7,6,7,9,12], note: "Seasonal: winter demand returns in about 4 weeks", keep: false },
+  { sku: "SKU-62045", name: "Bamboo desk organiser", wh: "Pune DC-2", units: 980, cover: 164, st: 13, cost: 450, price: 999, spark: [25,24,22,21,18,16,15,14], note: "Replaced by a newer model", keep: true },
+  { sku: "SKU-18733", name: "Glass storage jars, set of 6", wh: "Kolkata DC-1", units: 610, cover: 58, st: 34, cost: 300, price: 749, spark: [20,22,21,23,24,22,25,24], note: "Healthy", keep: null }
+];
+const FLASH_STRATS = [
+  { id: "conservative", label: "Protect margin", disc: 15, clear: .38 },
+  { id: "balanced", label: "Balanced", disc: 25, clear: .61 },
+  { id: "aggressive", label: "Clear fast", disc: 35, clear: .84 }
+];
+const inr = v => "₹" + Math.round(v).toLocaleString("en-IN");
+function sparkSVG(arr, color){
+  const w = 90, h = 26, mx = Math.max(...arr), mn = Math.min(...arr);
+  const d = arr.map((v, i) => `${i ? "L" : "M"}${(i * w / (arr.length - 1)).toFixed(1)},${(h - 3 - (v - mn) / (mx - mn || 1) * (h - 6)).toFixed(1)}`).join("");
+  return `<svg class="spark" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" aria-hidden="true"><path d="${d}" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+}
+function renderFlashDemo(body){
+  body.innerHTML = `<div class="demo-grid"><div>
+      <p class="demo-q-label" id="strat-label">Choose a clearance goal</p>
+      <div class="q-list" role="group" aria-labelledby="strat-label">${FLASH_STRATS.map((s, i) => `<button class="q-btn" type="button" data-s="${i}" aria-pressed="false"><b>${s.label}</b><br><span class="muted" style="font-size:.84rem">Discount up to ${s.disc}%</span></button>`).join("")}</div>
+      <p class="muted" style="font-size:.84rem;margin-top:14px">The agent scans every warehouse, picks what to clear, builds the campaign and waits for your approval before anything goes live.</p>
+    </div><div id="flash-out"><div class="demo-empty">Pick a clearance goal to start the agent.</div></div></div><div id="flash-results" aria-live="polite"></div>`;
+  const btns = $$(".q-btn", body);
+  btns.forEach(b => b.addEventListener("click", () => runFlash(+b.dataset.s, body, btns)));
+}
+async function runFlash(si, body, btns){
+  const run = ++demoRun, ok = () => run === demoRun, S = FLASH_STRATS[si];
+  btns.forEach(b => b.setAttribute("aria-pressed", String(+b.dataset.s === si)));
+  const out = $("#flash-out", body), res = $("#flash-results", body); res.innerHTML = "";
+  out.innerHTML = pipelineHTML(["Sync warehouse data", "Detect slow-moving stock", "Check sales history and trends", "Design the campaign", "Segment customers", "Wait for your approval", "Launch and track the flash sale"]);
+  setStep(out, 0, "running"); await wait(800); if (!ok()) return;
+  setStep(out, 0, "done", "12,480 SKUs synced from 4 warehouses. Last sync 2 minutes ago.");
+  setStep(out, 1, "running"); await wait(900); if (!ok()) return;
+  setStep(out, 1, "done", `<div class="table-wrap"><table class="res"><thead><tr><th>SKU</th><th>Warehouse</th><th class="num">On hand</th><th class="num">Days of cover</th><th></th></tr></thead><tbody>${FLASH_SKUS.map(k => `<tr><td>${esc(k.name)}</td><td>${esc(k.wh)}</td><td class="num">${k.units.toLocaleString("en-IN")}</td><td class="num">${k.cover}</td><td>${k.cover > 120 ? '<span class="flag">Slow</span>' : '<span class="flag ok">OK</span>'}</td></tr>`).join("")}</tbody></table></div><p style="margin-top:6px">4 SKUs have more than 120 days of cover.</p>`);
+  setStep(out, 2, "running"); await wait(1000); if (!ok()) return;
+  const flagged = FLASH_SKUS.filter(k => k.keep !== null), kept = FLASH_SKUS.filter(k => k.keep);
+  setStep(out, 2, "done", flagged.map(k => `<div class="trend-row${k.keep ? "" : " excluded"}">${sparkSVG(k.spark, k.keep ? "var(--danger)" : "var(--amber)")}<span><b>${esc(k.name)}</b><br>${esc(k.note)}. ${k.keep ? "Include." : "Exclude, hold stock."}</span></div>`).join(""));
+  const units = kept.reduce((a, k) => a + k.units, 0), capital = kept.reduce((a, k) => a + k.units * k.cost, 0);
+  setStep(out, 3, "running"); await wait(1000); if (!ok()) return;
+  setStep(out, 3, "done", `<div class="campaign"><small>Campaign</small><b>Home Refresh: 48-hour sale</b>
+    <div class="kv"><span>Discount</span><span>${S.disc}% off 3 SKUs (${units.toLocaleString("en-IN")} units)</span></div>
+    <div class="kv"><span>Subject line</span><span>Your home refresh, ${S.disc}% off for 48 hours</span></div>
+    <div class="kv"><span>Preview</span><span>Soft linen, fresh planters and a tidier desk. Picked for you, gone on Sunday.</span></div>
+    <div class="kv"><span>Floor price check</span><span style="color:var(--success)">Every item stays above landed cost</span></div></div>`);
+  setStep(out, 4, "running"); await wait(900); if (!ok()) return;
+  setStep(out, 4, "done", `<ul class="seg"><li><b>8,420</b> bought home décor in the last 12 months</li><li><b>5,960</b> respond to discounts (opened 2+ promos in 90 days)</li><li><b>2,315</b> viewed these items but didn't buy</li><li class="muted">1,204 recent full-price buyers excluded to protect trust</li></ul><p style="margin-top:4px">14,870 unique customers after de-duplication.</p>`);
+  setStep(out, 5, "running", `<p>Capital tied up in these 3 SKUs: <b style="color:var(--text)">${inr(capital)}</b>.</p><button class="btn btn-primary btn-sm" type="button" id="flash-approve" style="margin-top:10px">Approve and launch</button>`);
+  const approve = $("#flash-approve", out); approve.focus();
+  await new Promise(r => approve.addEventListener("click", r, { once: true })); if (!ok()) return;
+  setStep(out, 5, "done", "Approved by you. Campaign scheduled for 10:00.");
+  setStep(out, 6, "running", "Sending emails and tracking orders…");
+  res.innerHTML = `<div class="modal-sep"></div><h3 style="font-size:1rem">Live performance, simulated over 48 hours</h3>
+    <div class="fc-stats" style="grid-template-columns:repeat(4,1fr)">
+      <div class="fc-stat"><small>Units sold</small><b id="fl-units">0</b></div>
+      <div class="fc-stat"><small>Stock cleared</small><b id="fl-clear">0%</b></div>
+      <div class="fc-stat"><small>Capital freed</small><b id="fl-cap" class="up">₹0</b></div>
+      <div class="fc-stat"><small>Emails opened</small><b id="fl-open">0</b></div>
+    </div><div class="chart-box"><p style="font-size:.85rem;font-weight:600;margin-bottom:8px">Cumulative units sold vs. clearance target <span class="muted" id="fl-hour" style="font-weight:500">hour 0</span></p><div id="fl-chart"></div></div>`;
+  res.scrollIntoView({ behavior: RM ? "auto" : "smooth", block: "nearest" });
+  const total = units * S.clear, H = 48, curve = t => total * (1 - Math.exp(-3 * t)) / (1 - Math.exp(-3));
+  const avgCost = capital / units, target = units * .6;
+  const pts = [];
+  for (let hr = 0; hr <= H; hr += RM ? H : 2){
+    if (!ok()) return;
+    const u = curve(hr / H); pts.push([hr, u]);
+    $("#fl-units", res).textContent = Math.round(u).toLocaleString("en-IN");
+    $("#fl-clear", res).textContent = (u / units * 100).toFixed(0) + "%";
+    $("#fl-cap", res).textContent = inr(u * avgCost);
+    $("#fl-open", res).textContent = Math.round(14870 * .41 * (1 - Math.exp(-5 * hr / H))).toLocaleString("en-IN");
+    $("#fl-hour", res).textContent = `hour ${hr}`;
+    $("#fl-chart", res).innerHTML = flashChart(pts, units, target);
+    await wait(90);
+  }
+  const u = curve(1);
+  setStep(out, 6, "done", `Sale closed. ${Math.round(u).toLocaleString("en-IN")} units cleared, ${inr(u * avgCost)} of capital freed${u >= target ? ", ahead of the 60% target" : ". Agent recommends a second wave to reach the 60% target"}.`);
+}
+function flashChart(pts, units, target){
+  const W = 640, Hh = 200, pl = 44, pr = 12, pt = 10, pb = 24, max = units * .9;
+  const x = h => pl + h / 48 * (W - pl - pr), y = v => pt + (1 - v / max) * (Hh - pt - pb);
+  const grid = [0, .5, 1].map(f => `<line x1="${pl}" x2="${W - pr}" y1="${y(max * f)}" y2="${y(max * f)}" stroke="var(--line)"/><text x="${pl - 6}" y="${y(max * f) + 4}" text-anchor="end">${(max * f / 1000).toFixed(1)}k</text>`).join("");
+  const d = pts.map((p, i) => `${i ? "L" : "M"}${x(p[0]).toFixed(1)},${y(p[1]).toFixed(1)}`).join("");
+  const last = pts[pts.length - 1];
+  return `<svg viewBox="0 0 ${W} ${Hh}" aria-hidden="true">${grid}
+    <line x1="${pl}" x2="${W - pr}" y1="${y(target)}" y2="${y(target)}" stroke="var(--amber)" stroke-dasharray="5 5"/><text x="${W - pr}" y="${y(target) - 6}" text-anchor="end" style="fill:var(--amber)">60% target</text>
+    ${[0, 12, 24, 36, 48].map(h => `<text x="${x(h)}" y="${Hh - 6}" text-anchor="middle">${h}h</text>`).join("")}
+    <path d="${d}L${x(last[0])},${y(0)}L${x(0)},${y(0)}Z" fill="var(--accent)" opacity=".12"/>
+    <path d="${d}" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linejoin="round"/>
+    <circle cx="${x(last[0])}" cy="${y(last[1])}" r="4" fill="var(--accent)"/></svg>`;
+}
+
+/* ---------- Demo 5: Invoice & document processing agent ---------- */
+const INVOICES = [
+  { label: "Apex Packaging: standard invoice", vendor: "Apex Packaging Pvt Ltd", num: "INV-2026-0918", date: "22 Sep 2026", po: "PO-7702",
+    lines: [["Corrugated box 40x30x30 cm", 500, 42, 500, 42, 500], ["Packing tape 48 mm", 120, 65, 120, 65, 120]], outcome: "post" },
+  { label: "Northline Metals: price differs from PO", vendor: "Northline Metals LLP", num: "88412", date: "24 Sep 2026", po: "PO-7715",
+    lines: [["MS sheet 2 mm, 1250x2500", 60, 412, 60, 395, 60], ["Fastener kit M8", 40, 180, 40, 180, 40]], outcome: "price" },
+  { label: "Kavya Logistics: no PO number on the bill", vendor: "Kavya Logistics", num: "Bill 5530", date: "25 Sep 2026", po: null, suggest: "PO-7731",
+    lines: [["Freight Pune to Chennai, full truck", 2, 18500, 2, 18500, null]], outcome: "nopo" }
+];
+function invTotals(inv){ const sub = inv.lines.reduce((a, l) => a + l[1] * l[2], 0); return { sub, gst: sub * .18, total: sub * 1.18 }; }
+function renderInvoiceDemo(body){
+  body.innerHTML = `<div class="demo-grid"><div>${questionsHTML(INVOICES.map(i => ({ q: i.label })))}<div id="inv-paper" style="margin-top:18px"></div></div><div id="inv-out"><div class="demo-empty">Pick an incoming invoice to watch the agent read it, match it and decide what to do.</div></div></div><div id="inv-results" aria-live="polite"></div>`;
+  $("#q-label", body).textContent = "Pick an incoming invoice";
+  const btns = $$(".q-btn", body);
+  btns.forEach(b => b.addEventListener("click", () => runInvoice(+b.dataset.q, body, btns)));
+}
+function paperHTML(inv){
+  const t = invTotals(inv);
+  return `<div class="paper" aria-label="Invoice preview">
+    <div class="paper-head"><b data-f="vendor">${esc(inv.vendor)}</b><span>Tax invoice</span></div>
+    <div class="paper-meta"><span>No. <b data-f="num">${esc(inv.num)}</b></span><span>Date <b data-f="date">${esc(inv.date)}</b></span><span>PO <b data-f="po">${inv.po ? esc(inv.po) : "—"}</b></span></div>
+    <table><thead><tr><th>Item</th><th class="num">Qty</th><th class="num">Rate</th><th class="num">Amount</th></tr></thead>
+    <tbody>${inv.lines.map(l => `<tr data-f="line"><td>${esc(l[0])}</td><td class="num">${l[1]}</td><td class="num">${l[2].toLocaleString("en-IN")}</td><td class="num">${(l[1] * l[2]).toLocaleString("en-IN")}</td></tr>`).join("")}</tbody></table>
+    <div class="paper-tot"><span>Subtotal</span><b data-f="sub">${inr(t.sub)}</b><span>GST 18%</span><b data-f="gst">${inr(t.gst)}</b><span>Total due</span><b data-f="total">${inr(t.total)}</b></div></div>`;
+}
+async function runInvoice(qi, body, btns){
+  const run = ++demoRun, ok = () => run === demoRun, inv = INVOICES[qi], t = invTotals(inv);
+  btns.forEach(b => b.setAttribute("aria-pressed", String(+b.dataset.q === qi)));
+  const paper = $("#inv-paper", body), out = $("#inv-out", body), res = $("#inv-results", body);
+  paper.innerHTML = paperHTML(inv); res.innerHTML = "";
+  out.innerHTML = pipelineHTML(["Read the document", "Extract fields", "Match to purchase order and goods receipt", "Decide and route"]);
+  setStep(out, 0, "running"); await wait(800); if (!ok()) return;
+  setStep(out, 0, "done", "PDF, 1 page. Layout recognised as a tax invoice.");
+  setStep(out, 1, "running", `<div class="kvs" id="inv-kv"></div>`);
+  const fields = [["vendor", "Vendor", inv.vendor, .99], ["num", "Invoice number", inv.num, .98], ["date", "Invoice date", inv.date, .99], ["po", "PO reference", inv.po || "Not found", inv.po ? .97 : 0], ["sub", "Subtotal", inr(t.sub), .99], ["gst", "GST 18%", inr(t.gst), .98], ["total", "Total due", inr(t.total), .99]];
+  const kv = $("#inv-kv", out);
+  for (const [f, label, val, conf] of fields){
+    if (!ok()) return;
+    $$(`[data-f="${f}"]`, paper).forEach(el => el.classList.add("hl"));
+    kv.insertAdjacentHTML("beforeend", `<div class="kv"><span>${label}</span><span>${esc(val)} <em class="${conf ? "conf" : "conf warn"}">${conf ? conf.toFixed(2) : "missing"}</em></span></div>`);
+    await wait(260);
+  }
+  $$('[data-f="line"]', paper).forEach(el => el.classList.add("hl"));
+  setStep(out, 1, "done");
+  setStep(out, 2, "running"); await wait(900); if (!ok()) return;
+  let matchHTML = "";
+  if (inv.outcome === "nopo") matchHTML = `<p>No PO number on the document. Searched open POs for this vendor and amount.</p><div class="kv"><span>Best match</span><span>${inv.suggest}, freight Pune to Chennai, ${inr(t.sub)} <em class="conf">0.93</em></span></div>`;
+  matchHTML += `<div class="table-wrap"><table class="res"><thead><tr><th>Line</th><th class="num">Inv qty / rate</th><th class="num">PO qty / rate</th><th class="num">Received</th><th>Status</th></tr></thead><tbody>${inv.lines.map(l => {
+    const priceOk = l[2] === l[4], qtyOk = l[1] === l[3] && (l[5] === null || l[5] === l[1]);
+    const status = !priceOk ? `<span class="flag">Rate +${((l[2] / l[4] - 1) * 100).toFixed(1)}%</span>` : (inv.outcome === "nopo" ? `<span class="flag warn">Needs confirm</span>` : `<span class="flag ok">Match</span>`);
+    return `<tr><td>${esc(l[0])}</td><td class="num">${l[1]} × ${l[2]}</td><td class="num">${l[3]} × ${l[4]}</td><td class="num">${l[5] === null ? "Service" : l[5]}</td><td>${qtyOk ? status : '<span class="flag">Qty</span>'}</td></tr>`; }).join("")}</tbody></table></div>`;
+  setStep(out, 2, "done", matchHTML);
+  setStep(out, 3, "running"); await wait(800); if (!ok()) return;
+  if (inv.outcome === "post"){
+    setStep(out, 3, "done", `<span class="validated">${ICON_CHECK}Auto-posted to ERP</span>`);
+    res.innerHTML = `<div class="modal-sep"></div><h3 style="font-size:1rem">Posted to the ERP</h3><p class="muted" style="font-size:.92rem;margin-top:4px">All lines matched within tolerance, so no one had to touch it.</p>
+    <pre class="code">${esc(JSON.stringify({ doc_type: "AP_INVOICE", vendor_id: "V-1043", invoice_no: inv.num, po: inv.po, grn: "GRN-5518", subtotal: t.sub, tax: { gst_18: t.gst }, total: t.total, due_date: "2026-10-22", status: "POSTED", match: "3-way", reviewed_by: "agent" }, null, 2))}</pre>`;
+  } else {
+    const reason = inv.outcome === "price"
+      ? `The rate for MS sheet is ₹412 against ₹395 on ${inv.po}, a 4.3% variance. Your tolerance is 2%, so the agent held it for review. Overbilled amount: ${inr(60 * 17 * 1.18)} incl. GST.`
+      : `The bill has no PO number. The agent found ${inv.suggest} with a 0.93 match on vendor, route and amount, but won't post without a person confirming.`;
+    const acts = inv.outcome === "price" ? ["Pay PO rate and notify vendor", "Approve invoiced rate"] : ["Confirm " + inv.suggest + " and post", "Reject and return to vendor"];
+    setStep(out, 3, "done", `<span class="flag warn" style="font-size:.8rem">Sent to exception queue</span>`);
+    res.innerHTML = `<div class="modal-sep"></div><div class="exception"><h3 style="font-size:1rem">Needs your decision</h3><p>${esc(reason)}</p>
+      <div class="proj-actions" style="margin-top:14px"><button class="btn btn-primary btn-sm" type="button" data-act="0">${esc(acts[0])}</button><button class="btn btn-ghost btn-sm" type="button" data-act="1">${esc(acts[1])}</button></div><p id="inv-decision" class="run-meta" style="margin-top:10px"></p></div>`;
+    $$("[data-act]", res).forEach(b => b.addEventListener("click", () => {
+      $$("[data-act]", res).forEach(x => x.disabled = true);
+      const msgs = inv.outcome === "price"
+        ? ["Posted at the PO rate. A debit note and an email to the vendor were drafted automatically.", "Posted at the invoiced rate. Your approval is recorded in the audit trail."]
+        : [`Linked to ${inv.suggest} and posted. The agent will remember this vendor's billing format.`, "Rejected. A return email asking for the PO number was sent to the vendor."];
+      $("#inv-decision", res).textContent = msgs[+b.dataset.act];
+    }));
+    res.scrollIntoView({ behavior: RM ? "auto" : "smooth", block: "nearest" });
+  }
+}
+
+/* =========================================================================
+   CONTACT DETAILS + FORM (validation, success state, opens email app)
+   ========================================================================= */
+(function contact(){
+  $("#ci-email").textContent = CONFIG.email; $("#ci-email").href = "mailto:" + CONFIG.email;
+  $("#success-email").textContent = CONFIG.email; $("#success-email").href = "mailto:" + CONFIG.email;
+  $("#ft-email").href = "mailto:" + CONFIG.email; $("#ft-github").href = CONFIG.github;
+  $("#ci-github").href = CONFIG.github;
+  $("#ci-location").textContent = CONFIG.location;
+
+  const sel = $("#f-interest");
+  sel.innerHTML = `<option value="">Select an option</option>` + PROJECTS.map(p => `<option>${esc(p.name)}</option>`).join("") + `<option>Something custom</option>`;
+
+  const form = $("#contact-form");
+  const rules = {
+    "f-name": v => v.trim().length > 1,
+    "f-email": v => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()),
+    "f-company": v => v.trim().length > 1,
+    "f-interest": v => !!v,
+    "f-message": v => v.trim().length >= 20
+  };
+  const check = id => { const el = document.getElementById(id), good = rules[id](el.value); el.closest(".field").classList.toggle("invalid", !good); el.setAttribute("aria-invalid", String(!good)); return good; };
+  Object.keys(rules).forEach(id => {
+    const el = document.getElementById(id);
+    el.addEventListener("blur", () => { if (el.value) check(id); });
+    el.addEventListener("input", () => { if (el.closest(".field").classList.contains("invalid")) check(id); });
+  });
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    const bad = Object.keys(rules).filter(id => !check(id));
+    if (bad.length){ document.getElementById(bad[0]).focus(); return; }
+    const v = id => document.getElementById(id).value.trim();
+    const subject = `Discovery call: ${v("f-interest")} (${v("f-company")})`;
+    const text = `Name: ${v("f-name")}\nEmail: ${v("f-email")}\nCompany: ${v("f-company")}\nInterest: ${v("f-interest")}\n\n${v("f-message")}`;
+    // Published pages can't call external servers, so the message is handed to the visitor's email app.
+    // To use a form service instead, replace this line with your own submission code when self-hosting.
+    location.href = `mailto:${CONFIG.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(text)}`;
+    form.classList.add("sent");
+    $(".form-success", form).focus();
+  });
+  $("#form-reset").addEventListener("click", () => { form.reset(); form.classList.remove("sent"); $("#f-name").focus(); });
+})();
+</script>
+</body>
+</html>
