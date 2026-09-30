@@ -954,27 +954,27 @@ const PROJECTS = [
     id: "rag-assistant",
     github: CONFIG.github + "/enterprise-rag-knowledge-assistant",
     name: "Enterprise RAG Knowledge Assistant",
-    subtitle: "with multi-agent orchestration",
+    subtitle: "with LangGraph fallback routing",
     category: "Generative AI",
     tags: ["Agentic AI", "Enterprise AI", "NLP"],
     problem: "Employees lose hours searching scattered documents, and still aren't sure the answer they found is current, correct or meant for them.",
-    solution: "A knowledge assistant that answers questions over company documents with cited sources, with security and access control built into the design.",
+    solution: "A knowledge assistant that answers questions over company policy documents with section-level citations, and says so plainly when the policies don't cover a question.",
     capabilities: [
-      "Hybrid retrieval: BM25 keyword plus semantic vector search",
-      "Cross-encoder reranking for the most relevant passages",
-      "Multi-agent orchestration with fallback retrieval pipelines",
-      "Source-cited answers with evaluation and tracing"
+      "Hybrid retrieval: BM25 keyword plus FAISS vector search, fused with RRF",
+      "BGE cross-encoder reranking that also decides the route",
+      "LangGraph workflow with a query-rewrite fallback and refusal on weak evidence",
+      "Validated, section-level citations; runs offline in mock mode"
     ],
-    tech: ["Python","FastAPI","LangGraph","GPT-4o","FAISS","Elasticsearch","BGE Cross-Encoder","PostgreSQL","RAGAS","LangSmith","Docker","AWS ECS"],
+    tech: ["Python","FastAPI","LangGraph","GPT-4o","FAISS","BM25","BGE Cross-Encoder","RAGAS","PostgreSQL","SQLite","Docker","pytest"],
     impact: "Staff get trusted answers in seconds instead of digging through folders, and every claim links back to its source document.",
     demo: "rag",
     arch: [
-      { layer: "Interface", items: ["Chat UI","Slack / Teams","REST API (FastAPI)"] },
-      { layer: "Orchestration", items: ["LangGraph router","Retriever agent","Fallback agent","Answer agent"] },
-      { layer: "Retrieval", items: ["Elasticsearch BM25","FAISS vectors","BGE cross-encoder rerank"] },
-      { layer: "Generation", items: ["GPT-4o","Citation guardrails","Refusal on low confidence"] },
-      { layer: "Data & security", items: ["Document loaders","PostgreSQL metadata","Role-based access filters"] },
-      { layer: "Ops", items: ["RAGAS evaluation","LangSmith tracing","Docker on AWS ECS"] }
+      { layer: "Interface", items: ["Web chat UI","REST API (FastAPI)","CLI"] },
+      { layer: "Orchestration", items: ["LangGraph state graph","Confidence router","Query-rewrite fallback","Abstain path"] },
+      { layer: "Retrieval", items: ["BM25 (rank_bm25)","FAISS vectors","RRF fusion","BGE cross-encoder rerank"] },
+      { layer: "Generation", items: ["GPT-4o","Citation validator","Refusal on low confidence"] },
+      { layer: "Data", items: ["Section-aware chunking","Embedding cache","SQLite / PostgreSQL query log"] },
+      { layer: "Ops", items: ["RAGAS + retrieval metrics","Per-node pipeline trace","pytest","Docker Compose"] }
     ]
   },
   {
@@ -1490,37 +1490,37 @@ async function typeInto(el, text, run, speed = 14){
 
 /* ---------- Demo 1: RAG knowledge assistant ---------- */
 const RAG_QA = [
-  { q: "How many days of paid annual leave do I get, and can I carry unused days forward?",
-    rewrite: "annual leave entitlement full-time employees; carry-forward rules for unused leave",
-    access: "HR policies, General handbook",
-    cands: [["Leave Policy v4.2", "§2.1 Annual entitlement", .82, .91], ["Leave Policy v4.2", "§2.4 Carry-forward", .77, .88], ["Employee Handbook 2026", "§5 Time off", .61, .74], ["Remote Work Policy", "§3 Availability", .34, .52], ["Leave Policy v4.2", "§4 Notice periods", .48, .69]],
-    rerank: [[1, .94], [0, .92], [4, .71]],
-    answer: "Full-time employees receive 24 days of paid annual leave per calendar year, accrued at 2 days per month [1]. You can carry up to 8 unused days into the next year, but they must be used by 31 March or they lapse unless your manager approves an exception in writing [2]. Requests for more than 5 consecutive days need at least 2 weeks' notice [3].",
-    sources: [["Leave Policy v4.2", "§2.1 Annual entitlement", "24 days per year, accrued monthly."], ["Leave Policy v4.2", "§2.4 Carry-forward", "Max 8 days, use by 31 March."], ["Leave Policy v4.2", "§4 Notice periods", "2 weeks' notice for 5+ days."]] },
-  { q: "What's the daily meal allowance on a domestic business trip, and what receipts do I need?",
-    rewrite: "per diem meal allowance domestic travel; receipt requirements for expense claims",
-    access: "Finance policies, General handbook",
-    cands: [["Travel & Expense Guidelines 2026", "§3.2 Per diems", .85, .9], ["Travel & Expense Guidelines 2026", "§6 Receipts", .71, .83], ["Procurement Handbook", "§1 Spend approvals", .39, .47], ["Travel & Expense Guidelines 2026", "§3.5 International travel", .66, .72], ["Employee Handbook 2026", "§8 Reimbursements", .52, .68]],
-    rerank: [[0, .96], [1, .9], [4, .63]],
-    answer: "On domestic trips you can claim up to ₹2,500 per day for meals, or ₹1,200 for a partial day under 8 hours [1]. Itemised receipts are required for any single expense above ₹500, and claims must be filed in the expense tool within 30 days of returning [2]. Alcohol is not reimbursable [3].",
-    sources: [["Travel & Expense Guidelines 2026", "§3.2 Per diems", "Daily and partial-day limits."], ["Travel & Expense Guidelines 2026", "§6 Receipts", "Itemised receipts above ₹500."], ["Employee Handbook 2026", "§8 Reimbursements", "Non-reimbursable items."]] },
+  { q: "How many days of paid annual leave do I get, and can I carry unused days over?",
+    rewrite: "annual leave days carry unused",
+    route: "Direct: the top reranked passage cleared the confidence threshold",
+    cands: [["Annual & Sick Leave Policy", "LEV-2.1 Entitlement", .82, .91], ["Annual & Sick Leave Policy", "LEV-2.4 Carry-Over", .79, .88], ["Annual & Sick Leave Policy", "LEV-2.2 Accrual", .64, .77], ["Parental & Family Leave Policy", "PFL-5.3 Annual leave during parental leave", .58, .70], ["Annual & Sick Leave Policy", "LEV-3.5 Sickness during annual leave", .51, .62]],
+    rerank: [[0, .95], [1, .93], [3, .61]],
+    answer: "Full-time employees get 25 working days of paid annual leave per calendar year plus public holidays, rising to 27 days after 5 years and 30 days after 10 years of service [1]. You can carry over up to 5 unused days, which must be used by 31 March of the following year or they are forfeited [2]. Leave accrued during parental leave gets a 6-month extension on that deadline [3].",
+    sources: [["Annual & Sick Leave Policy", "LEV-2.1 Entitlement", "25 days, rising with length of service."], ["Annual & Sick Leave Policy", "LEV-2.4 Carry-Over", "Up to 5 days, use by 31 March."], ["Parental & Family Leave Policy", "PFL-5.3 Annual leave during parental leave", "Carry-over deadline extended by 6 months."]] },
+  { q: "What's the meal per diem on an international trip, and when do I need receipts?",
+    rewrite: "meal per diem international trip receipts",
+    route: "Direct: the top reranked passage cleared the confidence threshold",
+    cands: [["Business Travel Policy", "TRV-6.1 Per Diem Rates", .86, .90], ["Expense Reimbursement Policy", "EXP-2.3 Receipts", .74, .83], ["Expense Reimbursement Policy", "EXP-5.1 Meals While Travelling", .70, .81], ["Business Travel Policy", "TRV-6.2 Provided Meals", .66, .72], ["Expense Reimbursement Policy", "EXP-2.2 Submission Deadline", .41, .58]],
+    rerank: [[0, .96], [1, .91], [3, .74]],
+    answer: "For overnight international travel the meal per diem is USD 95 per day (USD 75 domestic), and 75% of the rate applies on the first and last day [1]. Per diems replace meal receipts, but any itemised expense of USD 25 or more needs an itemised receipt, and card statements are not accepted [2]. If a meal is provided, the per diem is reduced by 20% for breakfast, 30% for lunch and 50% for dinner [3].",
+    sources: [["Business Travel Policy", "TRV-6.1 Per Diem Rates", "USD 95 international, USD 75 domestic."], ["Expense Reimbursement Policy", "EXP-2.3 Receipts", "Itemised receipts from USD 25."], ["Business Travel Policy", "TRV-6.2 Provided Meals", "Reductions when meals are provided."]] },
   { q: "Can I use a personal USB drive on my work laptop?",
-    rewrite: "removable media personal USB storage policy on company-issued devices",
-    access: "IT & security policies (public tier)",
-    cands: [["Information Security Standard", "§7 Removable media", .88, .93], ["Information Security Standard", "§4 Data classification", .55, .71], ["Acceptable Use Policy", "§2 Personal devices", .7, .8], ["Remote Work Policy", "§5 Equipment", .45, .58], ["Employee Handbook 2026", "§11 IT support", .31, .49]],
-    rerank: [[0, .97], [2, .88], [1, .66]],
-    answer: "No. Personal USB drives and other removable storage are blocked on company laptops, and attempting to use them is logged [1]. To move files, use the approved cloud storage or request an encrypted company drive through the IT service desk [1]. Personal devices may not store any data classified as Internal or higher [2].",
-    sources: [["Information Security Standard", "§7 Removable media", "Blocked by default; approved alternatives."], ["Acceptable Use Policy", "§2 Personal devices", "No Internal data on personal devices."]] },
-  { q: "Do I need approval to buy a software subscription for my team?",
-    rewrite: "approval workflow software purchase SaaS subscription spend threshold",
-    access: "Operations policies, Finance policies",
-    cands: [["Procurement Handbook", "§3 Software & SaaS", .86, .9], ["Procurement Handbook", "§1 Spend approvals", .74, .84], ["Information Security Standard", "§9 Third-party vendors", .58, .77], ["Travel & Expense Guidelines 2026", "§9 Corporate cards", .5, .56], ["Employee Handbook 2026", "§8 Reimbursements", .33, .44]],
-    rerank: [[0, .95], [1, .9], [2, .84]],
-    answer: "Yes. All software subscriptions need a purchase request, even if the cost is small, because every tool must pass a security review first [1][3]. Your manager can approve up to ₹50,000 a year; anything above that also needs Finance sign-off [2]. Corporate cards should not be used to start new subscriptions [1].",
-    sources: [["Procurement Handbook", "§3 Software & SaaS", "Purchase request always required."], ["Procurement Handbook", "§1 Spend approvals", "Approval thresholds by amount."], ["Information Security Standard", "§9 Third-party vendors", "Security review before use."]] }
+    rewrite: "personal usb drive work laptop",
+    route: "Direct: the top reranked passage cleared the confidence threshold",
+    cands: [["IT Acceptable Use & Security Policy", "ITS-3.5 Removable Media", .88, .93], ["IT Acceptable Use & Security Policy", "ITS-3.2 Prohibited Activities", .61, .78], ["IT Acceptable Use & Security Policy", "ITS-3.4 Personal Devices (BYOD)", .70, .80], ["Remote Work & Equipment Policy", "RWE-3.1 Standard Equipment", .45, .58], ["IT Acceptable Use & Security Policy", "ITS-2.2 Handling Rules", .38, .55]],
+    rerank: [[0, .97], [1, .82], [2, .66]],
+    answer: "No. USB storage devices are blocked by default; exceptions need Information Security approval and must use a company-issued encrypted drive [1]. Connecting unauthorised devices to the corporate network and storing company data on personal cloud storage are also prohibited [2].",
+    sources: [["IT Acceptable Use & Security Policy", "ITS-3.5 Removable Media", "Blocked by default; encrypted company drives only."], ["IT Acceptable Use & Security Policy", "ITS-3.2 Prohibited Activities", "No unauthorised devices or personal cloud storage."]] },
+  { q: "How much PTO can I roll over?",
+    rewrite: "carry-over unused annual leave entitlement",
+    route: "Fallback: \u201cPTO\u201d and \u201croll over\u201d never appear in the policies, so the first pass scored low and the question was rewritten into policy vocabulary",
+    cands: [["Annual & Sick Leave Policy", "LEV-2.4 Carry-Over", .84, .89], ["Annual & Sick Leave Policy", "LEV-2.1 Entitlement", .69, .80], ["Annual & Sick Leave Policy", "LEV-3.1 Sick leave entitlement", .55, .61], ["Annual & Sick Leave Policy", "LEV-2.6 Payment in Lieu", .52, .66], ["Parental & Family Leave Policy", "PFL-5.3 Annual leave during parental leave", .47, .63]],
+    rerank: [[0, .93], [3, .58]],
+    answer: "You can carry over up to 5 unused days of annual leave into the next calendar year, and they must be used by 31 March or they are forfeited [1]. Carrying over more than 5 days needs written approval from the Head of People Operations and is only allowed in exceptional circumstances [1]. Unused leave is not paid out during employment [2].",
+    sources: [["Annual & Sick Leave Policy", "LEV-2.4 Carry-Over", "Up to 5 days, use by 31 March."], ["Annual & Sick Leave Policy", "LEV-2.6 Payment in Lieu", "No payout during employment."]] }
 ];
 function renderRagDemo(body){
-  body.innerHTML = `<div class="demo-grid"><div>${questionsHTML(RAG_QA)}</div><div id="rag-out"><div class="demo-empty">Choose a question to watch the assistant check access, search your documents, rerank the results and write a cited answer.</div></div></div>`;
+  body.innerHTML = `<div class="demo-grid"><div>${questionsHTML(RAG_QA)}</div><div id="rag-out"><div class="demo-empty">Choose a question to watch the assistant search the policies, rerank the results, fall back to a rewritten query when needed and write a cited answer.</div></div></div>`;
   const qBtns = $$(".q-btn", body);
   qBtns.forEach(b => b.addEventListener("click", () => runRag(+b.dataset.q, body, qBtns)));
 }
@@ -1528,10 +1528,10 @@ async function runRag(qi, body, qBtns){
   const run = ++demoRun; const d = RAG_QA[qi];
   qBtns.forEach(b => b.setAttribute("aria-pressed", String(+b.dataset.q === qi)));
   const out = $("#rag-out", body);
-  out.innerHTML = pipelineHTML(["Check access and rewrite the question", "Hybrid retrieval (keyword + semantic)", "Rerank with a cross-encoder", "Write a grounded, cited answer"]) + `<div id="rag-answer" aria-live="polite"></div>`;
+  out.innerHTML = pipelineHTML(["Analyze and route the question", "Hybrid retrieval (BM25 + vector, RRF)", "Rerank with a BGE cross-encoder", "Write a cited answer and validate citations"]) + `<div id="rag-answer" aria-live="polite"></div>`;
   const ok = () => run === demoRun;
   setStep(out, 0, "running"); await wait(800); if (!ok()) return;
-  setStep(out, 0, "done", `Allowed collections: ${esc(d.access)}<br>Search query: <span class="mono">${esc(d.rewrite)}</span>`);
+  setStep(out, 0, "done", `${esc(d.route)}<br>Search query: <span class="mono">${esc(d.rewrite)}</span>`);
   setStep(out, 1, "running"); await wait(600); if (!ok()) return;
   setStep(out, 1, "running", `<div class="bar-legend"><span>BM25</span><span class="v">Vector</span></div>` + d.cands.map(c => `<div class="score-row"><span class="doc">${esc(c[0])}, ${esc(c[1])}</span><span class="bars"><span class="bar"><i data-w="${c[2]}"></i></span><span class="bar v"><i data-w="${c[3]}"></i></span></span></div>`).join(""));
   await wait(40); $$(".bar i", out).forEach(i => i.style.width = (+i.dataset.w * 100) + "%");
@@ -1548,9 +1548,9 @@ async function runRag(qi, body, qBtns){
   const fmt = s => esc(s).replace(/\[(\d)\]/g, '<span class="cite" aria-label="source $1">$1</span>');
   for (let i = 1; i <= words.length; i += RM ? words.length : 2){ if (!ok()) return; pEl.innerHTML = fmt(words.slice(0, i).join(" ")); await wait(38); }
   pEl.innerHTML = fmt(d.answer);
-  setStep(out, 3, "done", "Every sentence is grounded in a retrieved passage.");
+  setStep(out, 3, "done", "Every citation points to a retrieved policy section; invented IDs would be removed.");
   $(".answer", ans).insertAdjacentHTML("beforeend", `<div class="sources">${d.sources.map((s, i) => `<div class="source"><b><span class="cite">${i+1}</span>${esc(s[0])}</b><span>${esc(s[1])}: ${esc(s[2])}</span></div>`).join("")}</div>
-    <div class="eval-row"><span class="eval-chip">faithfulness 0.96</span><span class="eval-chip">context precision 0.91</span><span class="eval-chip">trace logged</span></div>`);
+    <div class="eval-row"><span class="eval-chip">${d.route.startsWith("Fallback") ? "medium confidence, fallback used" : "high confidence"}</span><span class="eval-chip">citations validated</span><span class="eval-chip">simulated walkthrough</span></div>`);
 }
 
 /* ---------- Demo 2: Natural language to SQL ---------- */
